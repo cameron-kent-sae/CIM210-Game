@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIStats : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[CreateAssetMenu(fileName = "AI Stats", menuName = "Character Stats/AI Stats")]
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public class AIStats : ScriptableObject
+{
+    public string characterName = "Unnamed Character";
+
+    public Sprite characterSprite;
+
+
 }
