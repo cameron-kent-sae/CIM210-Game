@@ -19,6 +19,7 @@ public class ScenarioManager : MonoBehaviour
     void Start()
     {
         LoadNextScenario();
+        //UpdateScenarioOptions();
     }
 
     void Update()
@@ -26,15 +27,33 @@ public class ScenarioManager : MonoBehaviour
         
     }
 
-    public void ButtonSelected(float influence, float condition)
+    void UpdateScenarioOptions()
     {
-        if (aiManager)
+        foreach(Scenario scenario in scenarios)
         {
-            aiManager.UpdateAiStats(influence, condition);
+            scenario.scenarioOptions = new ScenarioButton[4];
+
+            for (int i = 0; i < 3; i++)
+            {
+                scenario.scenarioOptions[i] = new ScenarioButton();
+
+                if (i == 0)
+                    scenario.scenarioOptions[i].isTrue = true;
+                else if (i == 1)
+                    scenario.scenarioOptions[i].isTrue = true;
+                else if (i == 2)
+                    scenario.scenarioOptions[i].isTrue = scenario.hasOption3;
+                else if (i == 3)
+                    scenario.scenarioOptions[i].isTrue = scenario.hasOption4;
+            }
         }
-        else
+    }
+
+    public void ButtonSelected(int number)
+    {
+        if(number == 1)
         {
-            Debug.LogError("Missing aiManager");
+            
         }
 
 
@@ -51,12 +70,11 @@ public class ScenarioManager : MonoBehaviour
             {
                 if(i == 0)
                 {
-                    optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[i].optionName;
+                    optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[0].optionName;
                 }
                 else if (i == 1)
                 {
-                    //optionsButtons[1].gameObject.transform.GetChild("Text").GetComponent<Text>().text = scenarios[i].optionName;
-                    Debug.Log(optionsButtons[1].gameObject.transform.childCount);
+                    optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[0].option2Name;
                 }
                 else if(i == 2)
                 {
@@ -64,7 +82,7 @@ public class ScenarioManager : MonoBehaviour
                     {
                         optionsButtons[i].gameObject.SetActive(true);
 
-                        //optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[i].optionName;
+                        optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[0].option3Name;
                     }
                     else
                     {
@@ -77,7 +95,7 @@ public class ScenarioManager : MonoBehaviour
                     {
                         optionsButtons[i].gameObject.SetActive(true);
 
-                        //optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[i].optionName;
+                        optionsButtons[i].gameObject.transform.GetChild(0).GetComponent<Text>().text = scenarios[0].option4Name;
                     }
                     else
                     {

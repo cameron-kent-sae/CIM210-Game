@@ -10,6 +10,8 @@ public class Scenario : ScriptableObject
 
     [TextArea] public string scenarioText = "Scenario Text";
 
+    public ScenarioButton[] scenarioOptions;
+
     [Header("Option 1")]
     [Header("Options")]
     public string optionName = "Yes";
