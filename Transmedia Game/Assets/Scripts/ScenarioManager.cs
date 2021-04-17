@@ -51,12 +51,27 @@ public class ScenarioManager : MonoBehaviour
 
     public void ButtonSelected(int number)
     {
-        if(number == 1)
+        if(number == 0)
         {
-            
+            FinishScenario(scenarios[0].influenceLevel1, scenarios[0].conditionLevel1);
         }
+        else if (number == 1)
+        {
+            FinishScenario(scenarios[0].influenceLevel2, scenarios[0].conditionLevel2);
+        }
+        else if (number == 2)
+        {
+            FinishScenario(scenarios[0].influenceLevel3, scenarios[0].conditionLevel3);
+        }
+        else if (number == 3)
+        {
+            FinishScenario(scenarios[0].influenceLevel4, scenarios[0].conditionLevel4);
+        }
+    }
 
-
+    void FinishScenario(float influence, float condition)
+    {
+        //playerStats
     }
 
     void LoadNextScenario()
