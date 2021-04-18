@@ -13,5 +13,9 @@ public class AIStats : ScriptableObject
     public float maxInfluenceThreshold = 15;
     public float maxConditionThreshold = 15;
 
-    [Tooltip("Closer to 0 is condition, closer to 100 is influence")][Range(0, 100)] public float conditionVsInfluence = 50;
+    [Header("Favor Bias")]
+    [Range(-100, 100)] public float influenceUpConditionUp;
+    [Range(-100, 100)] public float influenceDownConditionUDown;
+    [Range(-100, 100)] public float influenceUpConditionDown;
+    [Range(-100, 100)] public float influenceDownConditionUp;
 }
