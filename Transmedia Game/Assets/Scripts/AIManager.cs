@@ -4,55 +4,83 @@ using UnityEngine;
 
 public class AIManager : MonoBehaviour
 {
+    public ScenarioManager scenarioManager;
+
     public AIStats[] aiCharacters;
 
-    public void UpdateAiStats(float influence, float condition)
-    {
+    private List<ScenarioButton> aiButtons;
 
+    public void UpdateAiStats(ScenarioButton button)
+    {
+        for(int i = 0; i < aiCharacters.Length; i++)
+        {
+            if(aiButtons[i] == button)
+            {
+                aiCharacters[i].influence += button.baseInfluence;
+            }
+            else
+            {
+                aiCharacters[i].influence -= 15;
+            }
+        }
     }
 
     public void GenerateChoices(Scenario scenario)
     {
+        aiButtons.Clear();
+
         foreach(AIStats ai in aiCharacters)
         {
             List<float> buttonChance = new List<float>();
-            List<ScenarioButton> priorityButtons = new List<ScenarioButton>();
-
-            int numbOfPriorityoptions = 0;
 
             foreach (ScenarioButton button in scenario.scenarioButtons)
             {
                 float additionalButtonbias = 0;
 
-                if(button.baseInfluence >= ai.maxInfluenceThreshold || button.baseCondition >= ai.maxConditionThreshold)
+                if (button.baseInfluence > 0 && button.baseCondition > 0)
                 {
-                    numbOfPriorityoptions++;
-
-                    priorityButtons.Add(button);
+                    additionalButtonbias += ai.influenceUpConditionUp;
                 }
-                else
+                else if (button.baseInfluence <= 0 && button.baseCondition <= 0)
                 {
-                    if(button.baseInfluence > 0 && button.baseCondition > 0)
-                    {
-                        additionalButtonbias += ai.influenceUpConditionUp;
-                    }
-                    else if (button.baseInfluence <= 0 && button.baseCondition <= 0)
-                    {
-                        additionalButtonbias += ai.influenceDownConditionUDown;
-                    }
-                    else if (button.baseInfluence > 0 && button.baseCondition <= 0)
-                    {
-                        additionalButtonbias += ai.influenceUpConditionDown;
-                    }
-                    else if (button.baseInfluence <= 0 && button.baseCondition > 0)
-                    {
-                        additionalButtonbias += ai.influenceDownConditionUp;
-                    }
+                    additionalButtonbias += ai.influenceDownConditionUDown;
+                }
+                else if (button.baseInfluence > 0 && button.baseCondition <= 0)
+                {
+                    additionalButtonbias += ai.influenceUpConditionDown;
+                }
+                else if (button.baseInfluence <= 0 && button.baseCondition > 0)
+                {
+                    additionalButtonbias += ai.influenceDownConditionUp;
                 }
 
                 buttonChance.Add(100 + additionalButtonbias);
             }
 
+            float totalSoundWeighting = 0;
+
+            foreach (float chance in buttonChance)
+            {
+                totalSoundWeighting += chance;
+            }
+
+            float randomNumber = Random.Range(1, totalSoundWeighting);
+            float counter = 0;
+
+            for (int i = 0; i < buttonChance.Count; i++)
+            {
+                if (randomNumber > counter && randomNumber < counter + buttonChance[i])
+                {
+                    float chance = 100 + ai.influence;
+                    scenarioManager.AIChoice(scenario.scenarioButtons[i], chance);
+
+                    aiButtons.Add(scenario.scenarioButtons[i]);
+                }
+
+                counter += buttonChance[i];
+            }
+
+            /*
             if(numbOfPriorityoptions == 1)
             {
                 // Play priorityButtons[i];
@@ -123,17 +151,9 @@ public class AIManager : MonoBehaviour
                     counter += buttonChance[i];
                 }
             }
+            */
         }
-    }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        scenarioManager.GenerateScenarioOutcome();
     }
 }

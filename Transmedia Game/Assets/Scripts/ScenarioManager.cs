@@ -17,10 +17,21 @@ public class ScenarioManager : MonoBehaviour
     public GameObject buttonsPrefab;
     public Transform[] buttonTransforms;
 
+    private List<ScenarioButton> scenarioButtons;
+    private List<float> scenarioButtonChances;
+
+    private ScenarioButton playerButtonChoice;
+
     void Start()
     {
         LoadNextScenario();
         //UpdateScenarioOptions();
+    }
+
+    public void AIChoice(ScenarioButton button, float chance)
+    {
+        scenarioButtons.Add(button);
+        scenarioButtonChances.Add(chance);
     }
 
     void Update()
@@ -28,15 +39,61 @@ public class ScenarioManager : MonoBehaviour
         
     }
 
-    void FinishScenario(float influence, float condition)
+    public void PlayerOption()
     {
-        //playerStats
+        // AIChoice(button, playerStats influence);
+        aiManager.GenerateChoices(scenarios[0]);
+        // Player button choice
+    }
+
+    public void GenerateScenarioOutcome()
+    {
+        float totalSoundWeighting = 0;
+
+        foreach (float chance in scenarioButtonChances)
+        {
+            totalSoundWeighting += chance;
+        }
+
+        float randomNumber = Random.Range(1, totalSoundWeighting);
+        float counter = 0;
+
+        for (int i = 0; i < scenarioButtonChances.Count; i++)
+        {
+            if (randomNumber > counter && randomNumber < counter + scenarioButtonChances[i])
+            {
+                FinishScenario(scenarioButtons[i]);
+            }
+
+            counter += scenarioButtonChances[i];
+        }
+    }
+
+    void FinishScenario(ScenarioButton button)
+    {
+        if(playerButtonChoice == button)
+        {
+            playerStats.influenceLevel += button.baseInfluence;
+        }
+        else
+        {
+            playerStats.influenceLevel -= 15;
+        }
+
+        playerStats.conditionLevel += button.baseCondition;
+
+        aiManager.UpdateAiStats(button);
+        
+        LoadNextScenario();
     }
 
     void LoadNextScenario()
     {
         if(scenarios.Count > 0)
         {
+            scenarioButtons.Clear();
+            scenarioButtonChances.Clear();
+
             scenarioTitleText.text = scenarios[0].scenarioTitle;
             scenarioDiscriptionText.text = scenarios[0].scenarioText;
 

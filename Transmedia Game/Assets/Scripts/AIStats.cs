@@ -10,8 +10,7 @@ public class AIStats : ScriptableObject
 
     public Sprite characterSprite;
 
-    public float maxInfluenceThreshold = 15;
-    public float maxConditionThreshold = 15;
+    public float influence = 10;
 
     [Header("Favor Bias")]
     [Range(-100, 100)] public float influenceUpConditionUp;
