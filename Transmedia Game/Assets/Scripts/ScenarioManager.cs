@@ -25,7 +25,6 @@ public class ScenarioManager : MonoBehaviour
     void Start()
     {
         LoadNextScenario();
-        //UpdateScenarioOptions();
     }
 
     public void AIChoice(ScenarioButton button, float chance)
@@ -34,16 +33,13 @@ public class ScenarioManager : MonoBehaviour
         scenarioButtonChances.Add(chance);
     }
 
-    void Update()
+    public void PlayerOption(ScenarioButton button)
     {
-        
-    }
+        AIChoice(button, playerStats.influenceLevel);
 
-    public void PlayerOption()
-    {
-        // AIChoice(button, playerStats influence);
         aiManager.GenerateChoices(scenarios[0]);
-        // Player button choice
+
+        playerButtonChoice = button;
     }
 
     public void GenerateScenarioOutcome()
@@ -93,6 +89,8 @@ public class ScenarioManager : MonoBehaviour
         {
             scenarioButtons.Clear();
             scenarioButtonChances.Clear();
+
+            playerButtonChoice = null;
 
             scenarioTitleText.text = scenarios[0].scenarioTitle;
             scenarioDiscriptionText.text = scenarios[0].scenarioText;
