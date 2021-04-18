@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5abbab882c23d445a85fcd79fb59a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioManager: {fileID: 933000639}
   aiCharacters: []
 --- !u!4 &450639434
 Transform:

@@ -24,6 +24,9 @@ public class ScenarioManager : MonoBehaviour
 
     void Start()
     {
+        scenarioButtons = new List<ScenarioButton>();
+        scenarioButtonChances = new List<float>();
+
         LoadNextScenario();
     }
 
@@ -87,9 +90,12 @@ public class ScenarioManager : MonoBehaviour
     {
         if(scenarios.Count > 0)
         {
-            scenarioButtons.Clear();
-            scenarioButtonChances.Clear();
-
+            if(scenarioButtons.Count > 0)
+            {
+                scenarioButtons.Clear();
+                scenarioButtonChances.Clear();
+            }
+            
             playerButtonChoice = null;
 
             scenarioTitleText.text = scenarios[0].scenarioTitle;
@@ -104,6 +110,16 @@ public class ScenarioManager : MonoBehaviour
                         GameObject button = Instantiate(buttonsPrefab, buttonTransforms[i], buttonTransforms[i]);
                         button.transform.position = buttonTransforms[i].position;
                         button.GetComponentInChildren<Text>().text = scenarios[0].scenarioButtons[i].buttonText;
+
+                        if (button.GetComponent<CustomButton>())
+                        {
+                            button.GetComponent<CustomButton>().scenarioButton = scenarios[0].scenarioButtons[i];
+                            button.GetComponent<CustomButton>().scenarioManager = gameObject.GetComponent<ScenarioManager>();
+                        }
+                        else
+                        {
+                            Debug.LogError("Button Prefab missing CustomButton Component");
+                        }
                     }
                 }
                 else

@@ -10,6 +10,16 @@ public class AIManager : MonoBehaviour
 
     private List<ScenarioButton> aiButtons;
 
+    private void Start()
+    {
+        aiButtons = new List<ScenarioButton>();
+
+        if (!scenarioManager)
+        {
+            scenarioManager = GameObject.Find("ScenarioManager").GetComponent<ScenarioManager>();
+        }
+    }
+
     public void UpdateAiStats(ScenarioButton button)
     {
         for(int i = 0; i < aiCharacters.Length; i++)
