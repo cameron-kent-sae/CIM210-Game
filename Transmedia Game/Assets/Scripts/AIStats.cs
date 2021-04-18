@@ -10,5 +10,8 @@ public class AIStats : ScriptableObject
 
     public Sprite characterSprite;
 
+    public float maxInfluenceThreshold = 15;
+    public float maxConditionThreshold = 15;
 
+    [Tooltip("Closer to 0 is condition, closer to 100 is influence")][Range(0, 100)] public float conditionVsInfluence = 50;
 }

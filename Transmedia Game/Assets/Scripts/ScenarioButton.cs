@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenarioButton : MonoBehaviour
+[CreateAssetMenu(fileName = "Scenario Button", menuName = "Scenario/Scenario Button")]
+
+public class ScenarioButton : ScriptableObject
 {
-    public bool isTrue;
-    public float influence;
-    public float condition;
+    public string buttonText;
+    [Range(-50, 50)] public float baseInfluence;
+    [Range(-50, 50)] public float baseCondition;
 }

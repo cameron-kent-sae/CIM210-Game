@@ -11,6 +11,14 @@ public class AIManager : MonoBehaviour
 
     }
 
+    public void GenerateChoices(Scenario scenario)
+    {
+        foreach(AIStats ai in aiCharacters)
+        {
+            //foreach
+        }
+    }
+
     void Start()
     {
         
