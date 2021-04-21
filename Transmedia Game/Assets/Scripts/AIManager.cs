@@ -8,14 +8,20 @@ public class AIManager : MonoBehaviour
 
     public AIStats[] aiCharacters;
     private List<AIStats> aiCharactersInPlay;
+    private List<AIStats> pickedCharacters;
 
     public int numberOfAICharacters = 6;
+    private int numberOfgeneratedCharacters;
+    private List<float> influenceNumber;
 
     private List<ScenarioButton> aiButtons;
 
     private void Start()
     {
         aiButtons = new List<ScenarioButton>();
+        aiCharactersInPlay = new List<AIStats>();
+        pickedCharacters = new List<AIStats>();
+        influenceNumber = new List<float>();
 
         if (!scenarioManager)
         {
@@ -27,35 +33,45 @@ public class AIManager : MonoBehaviour
 
     void GenerateCharacters()
     {
-        List<AIStats> pickedCharacters = new List<AIStats>();
-
-        int numberOfgeneratedCharacters = 0;
-
-        while(numberOfAICharacters < numberOfAICharacters + 1)
+        if(numberOfgeneratedCharacters < numberOfAICharacters + 1)
         {
             int rand = Random.Range(0, aiCharacters.Length);
 
+            Debug.Log("AI Manager: random number: " + rand);
+
             if (pickedCharacters.Count == 0)
             {
-                pickedCharacters.Add(aiCharacters[rand]);
-
-                numberOfgeneratedCharacters++;
+                AddAICharacter(aiCharacters[rand]);
             }
             else
             {
-                foreach(AIStats pickedChar in pickedCharacters)
-                {
-                    if(pickedChar != aiCharacters[rand])
-                    {
-                        pickedCharacters.Add(aiCharacters[rand]);
+                pickedCharacters = aiCharactersInPlay;
 
-                        numberOfgeneratedCharacters++;
+                foreach (AIStats pickedChar in pickedCharacters)
+                {
+                    if (pickedChar != aiCharacters[rand])
+                    {
+                        AddAICharacter(aiCharacters[rand]);
                     }
                 }
             }
-        }
 
-        SortCharacters();
+            Invoke("GenerateCharacters", 0.5f);
+        }
+        else
+        {
+            SortCharacters();
+        }
+    }
+
+    void AddAICharacter(AIStats character)
+    {
+        //pickedCharacters.Add(character);
+        aiCharactersInPlay.Add(character);
+
+        Debug.Log("AI Manager: add character: " + character);
+
+        numberOfgeneratedCharacters++;
     }
 
     public void UpdateAiStats(ScenarioButton button)
@@ -75,22 +91,26 @@ public class AIManager : MonoBehaviour
 
     void SortCharacters()
     {
-        List<float> influenceNumber = new List<float>();
+        List<AIStats> aiInPlay = new List<AIStats>();
 
-        foreach (AIStats ai in aiCharactersInPlay)
+        aiInPlay = aiCharactersInPlay;
+        //aiCharactersInPlay.Clear();
+        //aiCharactersInPlay = new List<AIStats>(aiInPlay.Count);
+
+        foreach (AIStats ai in aiInPlay)
         {
             influenceNumber.Add(ai.influence);
         }
 
         influenceNumber.Sort();
 
-        for(int a = 0; a < aiCharactersInPlay.Count; a++)
+        for(int a = 0; a < aiInPlay.Count; a++)
         {
             for (int i = 0; i < influenceNumber.Count; i++)
             {
-                if (aiCharactersInPlay[a].influence == influenceNumber[i])
+                if (aiInPlay[a].influence == influenceNumber[i])
                 {
-                    //aiCharacters.
+                    aiCharactersInPlay.Insert(i, aiCharactersInPlay[a]);
                 }
             }
         }
