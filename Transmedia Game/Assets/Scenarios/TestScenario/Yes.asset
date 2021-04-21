@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Yes
   m_EditorClassIdentifier: 
   buttonText: Yes
-  baseInfluence: 0
-  baseCondition: 0
+  baseInfluence: 5
+  baseCondition: -5

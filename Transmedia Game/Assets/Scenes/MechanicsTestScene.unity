@@ -467,6 +467,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenarios:
   - {fileID: 11400000, guid: 8a918ce214062484b8117bbb1fe93933, type: 2}
+  - {fileID: 11400000, guid: 88786c3a6408b434db1a13dee4f73b22, type: 2}
+  - {fileID: 11400000, guid: c549611ebbef6014ea393cfa1a903a2c, type: 2}
   playerStats: {fileID: 11400000, guid: 38d3ee8b906ca6247b25565aaf033197, type: 2}
   aiManager: {fileID: 450639433}
   scenarioTitleText: {fileID: 633998529}

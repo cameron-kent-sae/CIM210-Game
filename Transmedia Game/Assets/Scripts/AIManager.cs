@@ -37,6 +37,8 @@ public class AIManager : MonoBehaviour
 
     public void GenerateChoices(Scenario scenario)
     {
+        Debug.Log("AI Manager: Generate Choices");
+
         aiButtons.Clear();
 
         foreach(AIStats ai in aiCharacters)
@@ -67,14 +69,14 @@ public class AIManager : MonoBehaviour
                 buttonChance.Add(100 + additionalButtonbias);
             }
 
-            float totalSoundWeighting = 0;
+            float totalChanceWeighting = 0;
 
             foreach (float chance in buttonChance)
             {
-                totalSoundWeighting += chance;
+                totalChanceWeighting += chance;
             }
 
-            float randomNumber = Random.Range(1, totalSoundWeighting);
+            float randomNumber = Random.Range(1, totalChanceWeighting);
             float counter = 0;
 
             for (int i = 0; i < buttonChance.Count; i++)
@@ -88,6 +90,8 @@ public class AIManager : MonoBehaviour
                 }
 
                 counter += buttonChance[i];
+
+                Debug.Log("AI Manager: ai: " + ai + ", total chance weighting: " + totalChanceWeighting + ", i: " + i + " / " + buttonChance.Count);
             }
 
             /*

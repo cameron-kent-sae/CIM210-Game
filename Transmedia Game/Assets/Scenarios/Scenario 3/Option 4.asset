@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f19c906f28c5f4985ba9ed53298477, type: 3}
-  m_Name: Option 3
+  m_Name: Option 4
   m_EditorClassIdentifier: 
-  buttonText: 
-  baseInfluence: 0
-  baseCondition: 0
+  buttonText: Option 4
+  baseInfluence: 5
+  baseCondition: 5

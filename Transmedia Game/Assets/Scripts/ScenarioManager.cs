@@ -32,12 +32,16 @@ public class ScenarioManager : MonoBehaviour
 
     public void AIChoice(ScenarioButton button, float chance)
     {
+        Debug.Log("Scenario Manager: AIChoice, button: " + button + ", chance: " + chance);
+
         scenarioButtons.Add(button);
         scenarioButtonChances.Add(chance);
     }
 
     public void PlayerOption(ScenarioButton button)
     {
+        Debug.Log("Scenario Manager: Player Option, button: " + button);
+
         AIChoice(button, playerStats.influenceLevel);
 
         aiManager.GenerateChoices(scenarios[0]);
@@ -47,6 +51,8 @@ public class ScenarioManager : MonoBehaviour
 
     public void GenerateScenarioOutcome()
     {
+        Debug.Log("Scenario Manager: Generate Scenario Outcome");
+
         float totalSoundWeighting = 0;
 
         foreach (float chance in scenarioButtonChances)
@@ -57,6 +63,8 @@ public class ScenarioManager : MonoBehaviour
         float randomNumber = Random.Range(1, totalSoundWeighting);
         float counter = 0;
 
+        Debug.Log("Scenario Manager: Total Sound Weighting: " + totalSoundWeighting + ", randomNumber: " + randomNumber);
+
         for (int i = 0; i < scenarioButtonChances.Count; i++)
         {
             if (randomNumber > counter && randomNumber < counter + scenarioButtonChances[i])
@@ -65,12 +73,15 @@ public class ScenarioManager : MonoBehaviour
             }
 
             counter += scenarioButtonChances[i];
+            Debug.Log("Scenario Manager: int i: " + i + " / " + scenarioButtonChances.Count + ", Counter: " + counter);
         }
     }
 
     void FinishScenario(ScenarioButton button)
     {
-        if(playerButtonChoice == button)
+        Debug.Log("Scenario Manager: Finish Scenario, Button: " + button);
+
+        if (playerButtonChoice == button)
         {
             playerStats.influenceLevel += button.baseInfluence;
         }
@@ -82,12 +93,16 @@ public class ScenarioManager : MonoBehaviour
         playerStats.conditionLevel += button.baseCondition;
 
         aiManager.UpdateAiStats(button);
-        
+
+        scenarios.RemoveAt(0);
+
         LoadNextScenario();
     }
 
     void LoadNextScenario()
     {
+        Debug.Log("Load next Scenario");
+
         if(scenarios.Count > 0)
         {
             if(scenarioButtons.Count > 0)
