@@ -11,6 +11,6 @@ public class PlayerStats : ScriptableObject
     public Sprite playerSprite;
 
     public float influenceLevel = 1;
-    public float influencemultiplier = 1;
+    [Range(1, 3)] public int influencemultiplier = 1;
     public float conditionLevel = 40;
 }

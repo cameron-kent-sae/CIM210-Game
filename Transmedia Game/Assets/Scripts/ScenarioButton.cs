@@ -9,4 +9,6 @@ public class ScenarioButton : ScriptableObject
     public string buttonText;
     [Range(-50, 50)] public float baseInfluence;
     [Range(-50, 50)] public float baseCondition;
+
+     public int voteCount;
 }

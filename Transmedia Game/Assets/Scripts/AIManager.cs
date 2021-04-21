@@ -33,7 +33,7 @@ public class AIManager : MonoBehaviour
 
     void GenerateCharacters()
     {
-        if(numberOfgeneratedCharacters < numberOfAICharacters + 1)
+        while (numberOfgeneratedCharacters < numberOfAICharacters)
         {
             int rand = Random.Range(0, aiCharacters.Length);
 
@@ -55,13 +55,9 @@ public class AIManager : MonoBehaviour
                     }
                 }
             }
+        }
 
-            Invoke("GenerateCharacters", 0.5f);
-        }
-        else
-        {
-            SortCharacters();
-        }
+        SortCharacters();
     }
 
     void AddAICharacter(AIStats character)
@@ -118,6 +114,19 @@ public class AIManager : MonoBehaviour
         */
 
         aiCharactersInPlay.Sort(SortByInfluence);
+
+        // Set influence multipliers
+        aiCharactersInPlay[0].influenceMultiplier = 3;
+        aiCharactersInPlay[1].influenceMultiplier = 2;
+        aiCharactersInPlay[2].influenceMultiplier = 2;
+
+        foreach(AIStats ai in aiCharactersInPlay)
+        {
+            for(int i = 3; i < aiCharactersInPlay.Count; i++)
+            {
+                aiCharacters[i].influenceMultiplier = 1;
+            }
+        }
     }
 
     int SortByInfluence(AIStats ai1, AIStats ai2)
@@ -173,7 +182,7 @@ public class AIManager : MonoBehaviour
             {
                 if (randomNumber > counter && randomNumber < counter + buttonChance[i])
                 {
-                    float chance = ai.influence;
+                    int chance = ai.influenceMultiplier;
                     scenarioManager.AIChoice(scenario.scenarioButtons[i], chance);
 
                     aiButtons.Add(scenario.scenarioButtons[i]);

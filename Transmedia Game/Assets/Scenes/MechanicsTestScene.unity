@@ -233,6 +233,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 430c0f92204f2084698f97b76aaf61c6, type: 2}
   - {fileID: 11400000, guid: 11081a329873f78438ffbe1a0b576c0c, type: 2}
   - {fileID: 11400000, guid: 9c38dc803a5a7734fb54e33c33561121, type: 2}
+  - {fileID: 11400000, guid: 33c35a7bc5afc9749a54653bf0a04334, type: 2}
+  - {fileID: 11400000, guid: a56ab9f45bd5ebd44965fbc4e6e78efa, type: 2}
+  - {fileID: 11400000, guid: b8c9a40d70d869d4088b14326e3bcbcd, type: 2}
+  numberOfAICharacters: 4
 --- !u!4 &450639434
 Transform:
   m_ObjectHideFlags: 0
@@ -630,6 +634,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c549611ebbef6014ea393cfa1a903a2c, type: 2}
   playerStats: {fileID: 11400000, guid: 38d3ee8b906ca6247b25565aaf033197, type: 2}
   aiManager: {fileID: 450639433}
+  winConditionLevel: 100
+  loseConditionLevel: 0
   buttonsPrefab: {fileID: 2855085986641953333, guid: 95385c92aab9c1844b85338973bb4839,
     type: 3}
   buttonTransforms:

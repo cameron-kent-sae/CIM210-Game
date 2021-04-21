@@ -25,35 +25,29 @@ public class ScenarioManager : MonoBehaviour
     public Text endingTitleText;
     public Text endingDiscriptionText;
 
-    private List<ScenarioButton> scenarioButtons;
-    private List<float> scenarioButtonChances;
-
     private ScenarioButton playerButtonChoice;
 
     private List<GameObject> uIButtons;
 
     void Start()
     {
-        scenarioButtons = new List<ScenarioButton>();
-        scenarioButtonChances = new List<float>();
         uIButtons = new List<GameObject>();
 
         LoadNextScenario();
     }
 
-    public void AIChoice(ScenarioButton button, float chance)
+    public void AIChoice(ScenarioButton button, int chance)
     {
         Debug.Log("Scenario Manager: AIChoice, button: " + button + ", chance: " + chance);
 
-        scenarioButtons.Add(button);
-        scenarioButtonChances.Add(100 + chance);
+        button.voteCount += chance;
     }
 
     public void PlayerOption(ScenarioButton button)
     {
         Debug.Log("Scenario Manager: Player Option, button: " + button);
 
-        AIChoice(button, playerStats.influenceLevel);
+        AIChoice(button, playerStats.influencemultiplier);
 
         aiManager.GenerateChoices(scenarios[0]);
 
@@ -62,30 +56,14 @@ public class ScenarioManager : MonoBehaviour
 
     public void GenerateScenarioOutcome()
     {
-        Debug.Log("Scenario Manager: Generate Scenario Outcome");
+        uIButtons.Sort(SortScenarioOptionScores);
 
-        float totalSoundWeighting = 0;
+        FinishScenario(uIButtons[uIButtons.Count - 1].GetComponent<CustomButton>().scenarioButton);
+    }
 
-        foreach (float chance in scenarioButtonChances)
-        {
-            totalSoundWeighting += chance;
-        }
-
-        float randomNumber = Random.Range(1, totalSoundWeighting);
-        float counter = 0;
-
-        Debug.Log("Scenario Manager: Total Sound Weighting: " + totalSoundWeighting + ", randomNumber: " + randomNumber);
-
-        for (int i = 0; i < scenarioButtonChances.Count; i++)
-        {
-            if (randomNumber > counter && randomNumber < counter + scenarioButtonChances[i])
-            {
-                FinishScenario(scenarioButtons[i]);
-            }
-
-            counter += scenarioButtonChances[i];
-            Debug.Log("Scenario Manager: int i: " + i + " / " + scenarioButtonChances.Count + ", Counter: " + counter);
-        }
+    int SortScenarioOptionScores(GameObject button1, GameObject button2)
+    {
+        return button1.GetComponent<CustomButton>().scenarioButton.voteCount.CompareTo(button2.GetComponent<CustomButton>().scenarioButton.voteCount);
     }
 
     void FinishScenario(ScenarioButton button)
@@ -109,8 +87,11 @@ public class ScenarioManager : MonoBehaviour
 
         foreach (GameObject uiButton in uIButtons)
         {
+            uiButton.GetComponent<CustomButton>().scenarioButton.voteCount = 0;
+
             Destroy(uiButton);
         }
+
         uIButtons.Clear();
 
         CheckForWin();
@@ -151,15 +132,7 @@ public class ScenarioManager : MonoBehaviour
         Debug.Log("Scenario Manager: Scenarios Count:" + scenarios.Count);
 
         if (scenarios.Count > 0)
-        {
-            Debug.Log("Scenario Manager: Scenario Buttons Count:" + scenarioButtons.Count);
-
-            if (scenarioButtons.Count > 0)
-            {
-                scenarioButtons.Clear();
-                scenarioButtonChances.Clear();
-            }
-            
+        {            
             playerButtonChoice = null;
 
             scenarioTitleText.text = scenarios[0].scenarioTitle;
@@ -180,9 +153,14 @@ public class ScenarioManager : MonoBehaviour
 
                         uIButtons.Add(button);
 
+                        button.name = "Button " + i;
+
                         if (button.GetComponent<CustomButton>())
                         {
+                            button.name = "Button " + i;
+
                             button.GetComponent<CustomButton>().scenarioButton = scenarios[0].scenarioButtons[i];
+                            button.GetComponent<CustomButton>().scenarioButton.voteCount = 0;
                             button.GetComponent<CustomButton>().scenarioManager = gameObject.GetComponent<ScenarioManager>();
                         }
                         else
