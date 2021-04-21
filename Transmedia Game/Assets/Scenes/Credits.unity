@@ -2541,8 +2541,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "This game is part of a transmedia experience to explore a future dystopian
-    narrative. \r\\n\nThis is a Media studies project as part of a bachelor of game
-    development at SAE institute sydney.\r \\n\nThe other parts can be found at www.website.com"
+    narrative. \r\\n\n\rThis is a Media Studies project as part of a bachelor of
+    game development at SAE Institute Sydney.\r\\n\n\rThe other parts can be found
+    at www.website.com\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd7ee6b00b64ed84ab0acb0edd1788fb, type: 2}
   m_sharedMaterial: {fileID: 6399875562504408793, guid: bd7ee6b00b64ed84ab0acb0edd1788fb,
