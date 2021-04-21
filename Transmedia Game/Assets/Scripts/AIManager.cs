@@ -7,6 +7,9 @@ public class AIManager : MonoBehaviour
     public ScenarioManager scenarioManager;
 
     public AIStats[] aiCharacters;
+    private List<AIStats> aiCharactersInPlay;
+
+    public int numberOfAICharacters = 6;
 
     private List<ScenarioButton> aiButtons;
 
@@ -18,19 +21,77 @@ public class AIManager : MonoBehaviour
         {
             scenarioManager = GameObject.Find("ScenarioManager").GetComponent<ScenarioManager>();
         }
+
+        GenerateCharacters();
+    }
+
+    void GenerateCharacters()
+    {
+        List<AIStats> pickedCharacters = new List<AIStats>();
+
+        int numberOfgeneratedCharacters = 0;
+
+        while(numberOfAICharacters < numberOfAICharacters + 1)
+        {
+            int rand = Random.Range(0, aiCharacters.Length);
+
+            if (pickedCharacters.Count == 0)
+            {
+                pickedCharacters.Add(aiCharacters[rand]);
+
+                numberOfgeneratedCharacters++;
+            }
+            else
+            {
+                foreach(AIStats pickedChar in pickedCharacters)
+                {
+                    if(pickedChar != aiCharacters[rand])
+                    {
+                        pickedCharacters.Add(aiCharacters[rand]);
+
+                        numberOfgeneratedCharacters++;
+                    }
+                }
+            }
+        }
+
+        SortCharacters();
     }
 
     public void UpdateAiStats(ScenarioButton button)
     {
-        for(int i = 0; i < aiCharacters.Length; i++)
+        for(int i = 0; i < aiCharactersInPlay.Count; i++)
         {
             if(aiButtons[i] == button)
             {
-                aiCharacters[i].influence += button.baseInfluence;
+                aiCharactersInPlay[i].influence += button.baseInfluence;
             }
             else
             {
-                aiCharacters[i].influence -= 15;
+                aiCharactersInPlay[i].influence -= 15;
+            }
+        }
+    }
+
+    void SortCharacters()
+    {
+        List<float> influenceNumber = new List<float>();
+
+        foreach (AIStats ai in aiCharactersInPlay)
+        {
+            influenceNumber.Add(ai.influence);
+        }
+
+        influenceNumber.Sort();
+
+        for(int a = 0; a < aiCharactersInPlay.Count; a++)
+        {
+            for (int i = 0; i < influenceNumber.Count; i++)
+            {
+                if (aiCharactersInPlay[a].influence == influenceNumber[i])
+                {
+                    //aiCharacters.
+                }
             }
         }
     }
@@ -41,7 +102,7 @@ public class AIManager : MonoBehaviour
 
         aiButtons.Clear();
 
-        foreach(AIStats ai in aiCharacters)
+        foreach(AIStats ai in aiCharactersInPlay)
         {
             List<float> buttonChance = new List<float>();
 

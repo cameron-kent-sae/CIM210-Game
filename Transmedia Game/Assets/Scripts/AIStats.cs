@@ -11,6 +11,7 @@ public class AIStats : ScriptableObject
     public Sprite characterSprite;
 
     public float influence = 10;
+    public float influenceMultiplier = 1;
 
     [Header("Favor Bias")]
     [Range(-100, 100)] public float influenceUpConditionUp;
