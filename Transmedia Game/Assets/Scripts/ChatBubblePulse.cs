@@ -18,7 +18,7 @@ public class ChatBubblePulse : MonoBehaviour
     // And something to do the manipulating
     private Coroutine routine;
     private bool keepGoing = true;
-    private bool closeEnough = false;
+    //private bool closeEnough = false;
 
     // Attach the coroutine
     void Awake()
