@@ -17,8 +17,13 @@ public class ScenarioManager : MonoBehaviour
     public CharacterStats playerStats;
 
     public int startingInfluence = 0;
+    public int maxInfluence = 100;
     public float startingCondition = 0;
     private float condition = 50;
+
+    [Header("UI")]
+    public Slider influenceSlider;
+    public Slider conditionSlider;
 
     [Header("Buttons")]
     public GameObject buttonsPrefab;
@@ -86,6 +91,11 @@ public class ScenarioManager : MonoBehaviour
         if (playerButtonChoice == button)
         {
             playerStats.influence += button.baseInfluence;
+
+            if(playerStats.influence > maxInfluence)
+            {
+                playerStats.influence = maxInfluence;
+            }
         }
         else
         {
@@ -107,6 +117,7 @@ public class ScenarioManager : MonoBehaviour
 
         uIButtons.Clear();
 
+        UpdateUISliders();
         CheckForWin();
     }
 
@@ -136,6 +147,27 @@ public class ScenarioManager : MonoBehaviour
         else
         {
             LoadNextScenario();
+        }
+    }
+
+    void UpdateUISliders()
+    {
+        if (influenceSlider)
+        {
+            influenceSlider.value = (playerStats.influence + 100) / 200;
+        }
+        else
+        {
+            Debug.LogError("Missing influence slider");
+        }
+
+        if (conditionSlider)
+        {
+            conditionSlider.value = condition / 100;
+        }
+        else
+        {
+            Debug.LogError("Missing condition slider");
         }
     }
 

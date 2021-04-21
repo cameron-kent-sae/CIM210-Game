@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
   m_Name: AI 8
   m_EditorClassIdentifier: 
-  characterName: Unnamed Character
+  characterName: Thomas
   characterSprite: {fileID: 0}
-  influence: 10
+  influence: 17
   influenceMultiplier: 1
-  influenceUpConditionUp: 0
-  influenceDownConditionUDown: 0
-  influenceUpConditionDown: 0
-  influenceDownConditionUp: 0
+  influenceUpConditionUp: 50
+  influenceDownConditionUDown: -50
+  influenceUpConditionDown: -15
+  influenceDownConditionUp: 15

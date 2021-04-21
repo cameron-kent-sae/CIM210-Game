@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
   m_Name: AI 2
   m_EditorClassIdentifier: 
-  characterName: Unnamed Character
+  characterName: Yasmin
   characterSprite: {fileID: 0}
-  influence: -35
+  influence: 2.1000004
+  influenceMultiplier: 2
   influenceUpConditionUp: -47
   influenceDownConditionUDown: 42
   influenceUpConditionDown: 44

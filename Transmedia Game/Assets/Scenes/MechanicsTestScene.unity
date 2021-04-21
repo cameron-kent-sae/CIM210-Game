@@ -237,6 +237,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 33c35a7bc5afc9749a54653bf0a04334, type: 2}
   - {fileID: 11400000, guid: a56ab9f45bd5ebd44965fbc4e6e78efa, type: 2}
   - {fileID: 11400000, guid: b8c9a40d70d869d4088b14326e3bcbcd, type: 2}
+  - {fileID: 11400000, guid: a951bfab1943620498b5b528ef5cc1a0, type: 2}
+  - {fileID: 11400000, guid: 3e69d8e0568f1384ebec5ec78516d736, type: 2}
+  - {fileID: 11400000, guid: 05f1ba9bee54eb448801ab729a508620, type: 2}
   numberOfAICharacters: 6
 --- !u!4 &450639434
 Transform:

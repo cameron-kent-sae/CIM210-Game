@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
   m_Name: AI 3
   m_EditorClassIdentifier: 
-  characterName: Unnamed Character
+  characterName: Brandon
   characterSprite: {fileID: 0}
-  influence: -50
+  influence: 10
+  influenceMultiplier: 1
   influenceUpConditionUp: 47
   influenceDownConditionUDown: 22
   influenceUpConditionDown: 39
