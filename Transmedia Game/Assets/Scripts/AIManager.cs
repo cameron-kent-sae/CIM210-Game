@@ -91,6 +91,7 @@ public class AIManager : MonoBehaviour
 
     void SortCharacters()
     {
+        /*
         List<AIStats> aiInPlay = new List<AIStats>();
 
         aiInPlay = aiCharactersInPlay;
@@ -114,6 +115,14 @@ public class AIManager : MonoBehaviour
                 }
             }
         }
+        */
+
+        aiCharactersInPlay.Sort(SortByInfluence);
+    }
+
+    int SortByInfluence(AIStats ai1, AIStats ai2)
+    {
+        return ai1.influence.CompareTo(ai2.influence);
     }
 
     public void GenerateChoices(Scenario scenario)
