@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Unnamed Character
   characterSprite: {fileID: 0}
-  influence: 10
-  influenceUpConditionUp: 0
-  influenceDownConditionUDown: 0
-  influenceUpConditionDown: 0
-  influenceDownConditionUp: 0
+  influence: -50
+  influenceUpConditionUp: 47
+  influenceDownConditionUDown: 22
+  influenceUpConditionDown: 39
+  influenceDownConditionUp: -25

@@ -83,7 +83,7 @@ public class AIManager : MonoBehaviour
             {
                 if (randomNumber > counter && randomNumber < counter + buttonChance[i])
                 {
-                    float chance = 100 + ai.influence;
+                    float chance = ai.influence;
                     scenarioManager.AIChoice(scenario.scenarioButtons[i], chance);
 
                     aiButtons.Add(scenario.scenarioButtons[i]);

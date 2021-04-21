@@ -22,10 +22,13 @@ public class ScenarioManager : MonoBehaviour
 
     private ScenarioButton playerButtonChoice;
 
+    private List<GameObject> uIButtons;
+
     void Start()
     {
         scenarioButtons = new List<ScenarioButton>();
         scenarioButtonChances = new List<float>();
+        uIButtons = new List<GameObject>();
 
         LoadNextScenario();
     }
@@ -35,7 +38,7 @@ public class ScenarioManager : MonoBehaviour
         Debug.Log("Scenario Manager: AIChoice, button: " + button + ", chance: " + chance);
 
         scenarioButtons.Add(button);
-        scenarioButtonChances.Add(chance);
+        scenarioButtonChances.Add(100 + chance);
     }
 
     public void PlayerOption(ScenarioButton button)
@@ -96,16 +99,25 @@ public class ScenarioManager : MonoBehaviour
 
         scenarios.RemoveAt(0);
 
+        foreach (GameObject uiButton in uIButtons)
+        {
+            Destroy(uiButton);
+        }
+        uIButtons.Clear();
+
         LoadNextScenario();
     }
 
     void LoadNextScenario()
     {
         Debug.Log("Load next Scenario");
+        Debug.Log("Scenario Manager: Scenarios Count:" + scenarios.Count);
 
-        if(scenarios.Count > 0)
+        if (scenarios.Count > 0)
         {
-            if(scenarioButtons.Count > 0)
+            Debug.Log("Scenario Manager: Scenario Buttons Count:" + scenarioButtons.Count);
+
+            if (scenarioButtons.Count > 0)
             {
                 scenarioButtons.Clear();
                 scenarioButtonChances.Clear();
@@ -116,7 +128,7 @@ public class ScenarioManager : MonoBehaviour
             scenarioTitleText.text = scenarios[0].scenarioTitle;
             scenarioDiscriptionText.text = scenarios[0].scenarioText;
 
-            if(buttonTransforms.Length > 0)
+            if (buttonTransforms.Length > 0)
             {
                 if (buttonsPrefab)
                 {
@@ -124,7 +136,12 @@ public class ScenarioManager : MonoBehaviour
                     {
                         GameObject button = Instantiate(buttonsPrefab, buttonTransforms[i], buttonTransforms[i]);
                         button.transform.position = buttonTransforms[i].position;
+
+                        Debug.Log("Scenario Manager: Scenario Buttons current button:" + scenarios[0].scenarioButtons[i] + " / " + scenarios[0].scenarioButtons.Length);
+
                         button.GetComponentInChildren<Text>().text = scenarios[0].scenarioButtons[i].buttonText;
+
+                        uIButtons.Add(button);
 
                         if (button.GetComponent<CustomButton>())
                         {
@@ -135,6 +152,8 @@ public class ScenarioManager : MonoBehaviour
                         {
                             Debug.LogError("Button Prefab missing CustomButton Component");
                         }
+
+                        Debug.Log("Scenario Manager: Spawning Buttons: int i: " + i + " / " + scenarios[0].scenarioButtons.Length + ", Button: " + button);
                     }
                 }
                 else

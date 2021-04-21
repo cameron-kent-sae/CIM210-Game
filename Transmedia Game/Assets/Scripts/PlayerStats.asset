@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: James
   playerSprite: {fileID: 0}
-  influenceLevel: 1
-  conditionLevel: 40
+  influenceLevel: 10
+  conditionLevel: 0

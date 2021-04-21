@@ -151,7 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenarioManager: {fileID: 933000639}
-  aiCharacters: []
+  aiCharacters:
+  - {fileID: 11400000, guid: 430c0f92204f2084698f97b76aaf61c6, type: 2}
+  - {fileID: 11400000, guid: 11081a329873f78438ffbe1a0b576c0c, type: 2}
+  - {fileID: 11400000, guid: 9c38dc803a5a7734fb54e33c33561121, type: 2}
 --- !u!4 &450639434
 Transform:
   m_ObjectHideFlags: 0
