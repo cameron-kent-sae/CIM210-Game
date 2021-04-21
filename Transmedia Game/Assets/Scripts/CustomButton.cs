@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CustomButton : MonoBehaviour
 {
-     public ScenarioButton scenarioButton;
+    [HideInInspector] public ScenarioButton scenarioButton;
 
     [HideInInspector] public ScenarioManager scenarioManager;
 

@@ -11,5 +11,4 @@ public class Scenario : ScriptableObject
     [TextArea] public string scenarioText = "Scenario Text";
 
     public ScenarioButton[] scenarioButtons;
-
 }

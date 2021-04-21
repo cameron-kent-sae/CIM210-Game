@@ -17,5 +17,5 @@ MonoBehaviour:
   scenarioButtons:
   - {fileID: 11400000, guid: a57b71e98aed5db4eafb63477748a8be, type: 2}
   - {fileID: 11400000, guid: b03bb9d64e28ec643bd82ff6f008f34b, type: 2}
-  - {fileID: 11400000, guid: b03bb9d64e28ec643bd82ff6f008f34b, type: 2}
-  - {fileID: 11400000, guid: a57b71e98aed5db4eafb63477748a8be, type: 2}
+  - {fileID: 11400000, guid: 0dbef0d4af8589f4e8df92a3b3ba4c82, type: 2}
+  - {fileID: 11400000, guid: 7ea67e933b8b07d44bfaf4bf197d0ab4, type: 2}

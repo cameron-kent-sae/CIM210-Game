@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
-  m_Name: PlayerStats
+  m_Script: {fileID: 11500000, guid: 5ce8cef1d9fe7ff45a9e7b403ca32f11, type: 3}
+  m_Name: PlayerStats(Outdated)
   m_EditorClassIdentifier: 
   characterName: James
-  characterSprite: {fileID: 0}
-  influence: 1
-  influenceMultiplier: 1
-  influenceUpConditionUp: 1
-  influenceDownConditionUDown: 1
-  influenceUpConditionDown: 1
-  influenceDownConditionUp: 1
+  playerSprite: {fileID: 0}
+  influenceLevel: 0
+  influencemultiplier: 1
+  conditionLevel: 40

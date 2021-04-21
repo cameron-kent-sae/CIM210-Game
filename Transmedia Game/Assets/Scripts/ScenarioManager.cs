@@ -8,12 +8,17 @@ public class ScenarioManager : MonoBehaviour
     [Header("Scenario")]
     public List<Scenario> scenarios;
 
-    public PlayerStats playerStats;
-
     public AIManager aiManager;
 
     public int winConditionLevel = 100;
     public int loseConditionLevel = 0;
+
+    [Header("Player")]
+    public CharacterStats playerStats;
+
+    public int startingInfluence = 0;
+    public float startingCondition = 0;
+    private float condition = 50;
 
     [Header("Buttons")]
     public GameObject buttonsPrefab;
@@ -34,6 +39,14 @@ public class ScenarioManager : MonoBehaviour
         uIButtons = new List<GameObject>();
 
         LoadNextScenario();
+        SetStartingStats();
+    }
+
+    void SetStartingStats()
+    {
+        playerStats.influence = startingInfluence;
+
+        condition = startingCondition;
     }
 
     public void AIChoice(ScenarioButton button, int chance)
@@ -47,7 +60,7 @@ public class ScenarioManager : MonoBehaviour
     {
         Debug.Log("Scenario Manager: Player Option, button: " + button);
 
-        AIChoice(button, playerStats.influencemultiplier);
+        AIChoice(button, playerStats.influenceMultiplier);
 
         aiManager.GenerateChoices(scenarios[0]);
 
@@ -72,14 +85,14 @@ public class ScenarioManager : MonoBehaviour
 
         if (playerButtonChoice == button)
         {
-            playerStats.influenceLevel += button.baseInfluence;
+            playerStats.influence += button.baseInfluence;
         }
         else
         {
-            playerStats.influenceLevel -= 15;
+            playerStats.influence -= 15;
         }
 
-        playerStats.conditionLevel += button.baseCondition;
+        condition += button.baseCondition;
 
         aiManager.UpdateAiStats(button);
 
@@ -99,21 +112,21 @@ public class ScenarioManager : MonoBehaviour
 
     void CheckForWin()
     {
-        if (playerStats.conditionLevel >= winConditionLevel)
+        if (condition >= winConditionLevel)
         {
             string winTitle = "Condition Win";
             string winText = "The world condition has drastically improved and now everyone lives in an equal and peiceful world.";
 
             EndGame(winTitle, winText);
         }
-        else if (playerStats.conditionLevel <= loseConditionLevel)
+        else if (condition <= loseConditionLevel)
         {
             string loseTitle = "Condition Lose";
             string loseText = "The world condition has drastically decreced and now the world has gone to shit. Good job asshole.   -sorry I'll change this text later";
 
             EndGame(loseTitle, loseText);
         }
-        else if (playerStats.influenceLevel <= -100)
+        else if (playerStats.influence <= -100)
         {
             string loseTitle = "Influence Lose";
             string loseText = "Your influence has dropped so much that no one likes you anymore and you have been kicked out. You can no longer vote on policies and have lost the power to change the world.";

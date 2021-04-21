@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
-  m_Name: PlayerStats
+  m_Name: AI 7
   m_EditorClassIdentifier: 
-  characterName: James
+  characterName: Unnamed Character
   characterSprite: {fileID: 0}
-  influence: 1
+  influence: 10
   influenceMultiplier: 1
-  influenceUpConditionUp: 1
-  influenceDownConditionUDown: 1
-  influenceUpConditionDown: 1
-  influenceDownConditionUp: 1
+  influenceUpConditionUp: 0
+  influenceDownConditionUDown: 0
+  influenceUpConditionDown: 0
+  influenceDownConditionUp: 0

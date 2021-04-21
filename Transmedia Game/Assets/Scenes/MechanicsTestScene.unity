@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenarioManager: {fileID: 933000639}
+  playerStats: {fileID: 11400000, guid: 0b2e316d53f06054bbfca36b45f42e76, type: 2}
   aiCharacters:
   - {fileID: 11400000, guid: 430c0f92204f2084698f97b76aaf61c6, type: 2}
   - {fileID: 11400000, guid: 11081a329873f78438ffbe1a0b576c0c, type: 2}
@@ -236,7 +237,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 33c35a7bc5afc9749a54653bf0a04334, type: 2}
   - {fileID: 11400000, guid: a56ab9f45bd5ebd44965fbc4e6e78efa, type: 2}
   - {fileID: 11400000, guid: b8c9a40d70d869d4088b14326e3bcbcd, type: 2}
-  numberOfAICharacters: 4
+  numberOfAICharacters: 6
 --- !u!4 &450639434
 Transform:
   m_ObjectHideFlags: 0
@@ -632,10 +633,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a918ce214062484b8117bbb1fe93933, type: 2}
   - {fileID: 11400000, guid: 88786c3a6408b434db1a13dee4f73b22, type: 2}
   - {fileID: 11400000, guid: c549611ebbef6014ea393cfa1a903a2c, type: 2}
-  playerStats: {fileID: 11400000, guid: 38d3ee8b906ca6247b25565aaf033197, type: 2}
   aiManager: {fileID: 450639433}
   winConditionLevel: 100
   loseConditionLevel: 0
+  playerStats: {fileID: 11400000, guid: 0b2e316d53f06054bbfca36b45f42e76, type: 2}
+  startingInfluence: 1
+  startingCondition: 50
   buttonsPrefab: {fileID: 2855085986641953333, guid: 95385c92aab9c1844b85338973bb4839,
     type: 3}
   buttonTransforms:
