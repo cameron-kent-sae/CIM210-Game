@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
+  m_Name: AI 1
+  m_EditorClassIdentifier: 
+  characterName: David
+  characterSprite: {fileID: 0}
+  influence: 12.1
+  influenceMultiplier: 2
+  influenceUpConditionUp: 22
+  influenceDownConditionUDown: -28
+  influenceUpConditionDown: 58
+  influenceDownConditionUp: 0
