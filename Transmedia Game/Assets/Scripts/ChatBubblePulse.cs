@@ -5,29 +5,19 @@ using UnityEngine.UI;
 
 public class ChatBubblePulse : MonoBehaviour
 {
-    // Grow parameters
-    public float approachSpeed = 0.02f;
-    public float growthBound = 2f;
-    public float shrinkBound = 0.5f;
+    private float approachSpeed = 0.8f;
+    private float growthBound = 1.1f;
+    private float shrinkBound = 0.8f;
     private float currentRatio = 1;
-
-    // The text object we're trying to manipulate
     private Image icon;
-    private float originalFontSize;
-
-    // And something to do the manipulating
     private Coroutine routine;
-    private bool keepGoing = true;
-    //private bool closeEnough = false;
+    public bool keepGoing = true;
 
-    // Attach the coroutine
     void Awake()
     {
-        // Find the text  element we want to use
-        this.icon = this.gameObject.GetComponent<Image>();
+        icon = gameObject.GetComponent<Image>();
 
-        // Then start the routine
-        this.routine = StartCoroutine(this.Pulse());
+        routine = StartCoroutine(Pulse());
     }
 
     IEnumerator Pulse()
@@ -39,7 +29,7 @@ public class ChatBubblePulse : MonoBehaviour
             while (this.currentRatio != this.growthBound)
             {
                 // Determine the new ratio to use
-                currentRatio = Mathf.MoveTowards(currentRatio, growthBound, approachSpeed);
+                currentRatio = Mathf.MoveTowards(currentRatio, growthBound, approachSpeed * Time.deltaTime);
 
                 // Update our text element
                 this.icon.transform.localScale = Vector3.one * currentRatio;
@@ -52,7 +42,7 @@ public class ChatBubblePulse : MonoBehaviour
             while (this.currentRatio != this.shrinkBound)
             {
                 // Determine the new ratio to use
-                currentRatio = Mathf.MoveTowards(currentRatio, shrinkBound, approachSpeed);
+                currentRatio = Mathf.MoveTowards(currentRatio, shrinkBound, approachSpeed * Time.deltaTime);
 
                 // Update our text element
                 this.icon.transform.localScale = Vector3.one * currentRatio;

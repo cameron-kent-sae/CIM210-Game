@@ -10,9 +10,12 @@ public class MenuController : MonoBehaviour
     public string gameScene, creditsScene;
     public CanvasGroup canvasGroup;
     public float fadeLength;
+    private AudioSource audioSource;
 
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         playBtn.onClick.AddListener(PlayGame);
         creditsBtn.onClick.AddListener(ShowCredits);
         exitBtn.onClick.AddListener(ExitGame);
@@ -34,10 +37,12 @@ public class MenuController : MonoBehaviour
 
     private void PlayGame()
     {
+        audioSource.Play();
         SceneManager.LoadScene(gameScene);
     }
     private void ShowCredits()
     {
+        audioSource.Play();
         SceneManager.LoadScene(creditsScene);
     }
 
