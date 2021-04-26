@@ -9,12 +9,6 @@ public class CursorController : MonoBehaviour
     private Vector2 hotSpot = Vector2.zero;
     private CursorMode cursorMode = CursorMode.Auto;
 
-    /*
-    private void Start()
-    {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
-    }*/
-
     void OnMouseOver()
     {
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);

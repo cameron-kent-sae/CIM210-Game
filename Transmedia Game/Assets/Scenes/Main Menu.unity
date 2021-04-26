@@ -938,7 +938,7 @@ MonoBehaviour:
   playBtn: {fileID: 1835587112}
   creditsBtn: {fileID: 1829881046}
   exitBtn: {fileID: 1760681958}
-  gameScene: Narrative
+  gameScene: Intro
   creditsScene: Credits
   canvasGroup: {fileID: 504812601}
   fadeLength: 10

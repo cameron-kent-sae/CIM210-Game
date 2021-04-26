@@ -1216,22 +1216,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et justo
-    ut sem scelerisque maximus aliquam vitae sem. Sed lobortis risus in urna auctor,
-    vel elementum magna vehicula. Quisque faucibus arcu non tellus sodales, et suscipit
-    dui pellentesque. Nullam ut imperdiet magna. Cras orci ex, pharetra in molestie
-    nec, fringilla vulputate ligula. Integer molestie vulputate dapibus. Ut tempus
-    faucibus leo ac fringilla.
-
-
-
-    Suspendisse at velit tincidunt, gravida nisi
-    eu, commodo tellus. Vestibulum eleifend felis et ex ornare vestibulum. Duis id
-    leo quis tortor consectetur gravida ac et libero. Donec non magna sit amet ipsum
-    porta aliquet id ut magna. Praesent id laoreet purus. Aenean id massa non nulla
-    finibus dapibus. Donec tincidunt congue enim, vitae ornare libero fermentum non.
-    Sed egestas nulla neque, id eleifend mauris mollis nec. Morbi mattis est eu nulla
-    blandit, in pulvinar magna posuere.'
+  m_text: "In the year 2050, a single multi-trillion dollar corporation reigns over
+    the world, having taken over all countries and governments. The Earth is now
+    divided into three classes Royalty, Nobility and the Serfs. Nobles and Serfs
+    at a young age are forced to get neural chip implants that survey their thoughts,
+    stripping away all free will and agency.\r\n\r\nJames Grant is a young Royale
+    who learns the stories of John Barlow and Michelle, a Serf and Noble who sacrificed
+    themselves in order to send a message to the citizens of the world and spark
+    change. After hearing the plight of the lower classes James decides it\u2019s
+    time to change things the only way he can. \n\nIt\u2019s time to rise in influence
+    among the Royal Governing Board and take action on the dilemmas facing the world
+    and improve the state of the world and create a bright future for the people!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd7ee6b00b64ed84ab0acb0edd1788fb, type: 2}
   m_sharedMaterial: {fileID: 6399875562504408793, guid: bd7ee6b00b64ed84ab0acb0edd1788fb,
@@ -1259,14 +1254,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 32
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
