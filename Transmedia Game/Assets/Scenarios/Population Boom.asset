@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
+  m_Name: Population Boom
+  m_EditorClassIdentifier: 
+  scenarioTitle: Population Boom
+  scenarioText: 'A recent rise in birthrates among the Serf has caused resources
+    to thin to strenuous levels causing strain on food rationing. Resources could
+    be directed from other classes, or a more forceful solution could be found such
+    as medical intervention or population control media.
+
+    A: Redirect Noble Food
+
+    B:
+    Covertly Reduce Fertility
+
+    C: Release Propaganda
+
+    D: Redirect Royal Food'
+  scenarioButtons: []

@@ -8,7 +8,7 @@ public class Scenario : ScriptableObject
 {
     public string scenarioTitle = "New Scenario";
 
-    [TextArea] public string scenarioText = "Scenario Text";
+    [TextArea(12, 16)] public string scenarioText = "Scenario Text";
 
     public ScenarioButton[] scenarioButtons;
 }

@@ -1198,9 +1198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: -1
-  m_MinHeight: 80
+  m_MinHeight: 180
   m_PreferredWidth: -1
-  m_PreferredHeight: 100
+  m_PreferredHeight: 200
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -1223,10 +1223,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A thing is happening that you need to vote on which will have positive
-    and negative effects on your influence and the world condition... ... ... ...
-    ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...
-    ... ... ... ... ... ... ... ... ... ... ... ... ...
+  m_text: A recent rise in birthrates among the Serf has caused resources to thin
+    to strenuous levels causing strain on food rationing. Resources could be directed
+    from other classes, or a more forceful solution could be found such as medical
+    intervention or population control media.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd7ee6b00b64ed84ab0acb0edd1788fb, type: 2}
   m_sharedMaterial: {fileID: 6399875562504408793, guid: bd7ee6b00b64ed84ab0acb0edd1788fb,
@@ -1254,8 +1254,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7404,7 +7404,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 8
     m_Right: 8
-    m_Top: 8
+    m_Top: 12
     m_Bottom: 8
   m_ChildAlignment: 0
   m_Spacing: 0

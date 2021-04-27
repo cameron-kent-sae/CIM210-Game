@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
+  m_Name: Viral Outbreak
+  m_EditorClassIdentifier: 
+  scenarioTitle: Viral Outbreak
+  scenarioText: 'An extremely contagious new virus has begun to spread throughout
+    the Serf class, it could potentially be very lethal. A vaccination could be developed
+    by Royal doctors to minimise the death toll and impact on vital industries but
+    it will be costly.
+
+    A: Develop Vaccination
+
+    B: Don''t Interfere'
+  scenarioButtons: []
