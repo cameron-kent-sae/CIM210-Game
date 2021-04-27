@@ -26,4 +26,8 @@ MonoBehaviour:
     C: Release Propaganda
 
     D: Redirect Royal Food'
-  scenarioButtons: []
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

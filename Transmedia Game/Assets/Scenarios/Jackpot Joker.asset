@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
+  m_Name: Jackpot Joker
+  m_EditorClassIdentifier: 
+  scenarioTitle: Jackpot Joker
+  scenarioText: "A Noble has recently won an exorbitant amount of money at a casino
+    and is trying to buy their way into the Royal class. Their winnings trifle in
+    comparison to Royal wealth but they\u2019ve made their desire to ascend quite
+    public. It could be an opportunity to win favour or enforce the standing class
+    order.\nA: Ascend Them for Show\nB: Crush Their Request"
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}

@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
-  m_Name: Viral Outbreak
+  m_Name: Media Storm
   m_EditorClassIdentifier: 
-  scenarioTitle: Viral Outbreak
-  scenarioText: 'An extremely contagious new virus has begun to spread throughout
-    the Serf class, it could potentially be very lethal. A vaccination could be developed
-    by Royal doctors to minimise the death toll and impact on vital industries but
-    it will be costly.
+  scenarioTitle: Media Storm
+  scenarioText: 'A recent thunderstorm has caused a technical issue resulting in
+    Noble broadcasters showing undoctored footage in media releases. The footage
+    while not damning does not flatter the Royal class as per the Noble Media Agreement.
 
-    A: Develop Vaccination
+    A:
+    Make Example of Noble
 
-    B: Don''t Interfere'
+    B: Claim Footage as False
+
+    C: Just Repair Damage'
   scenarioButtons:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
