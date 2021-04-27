@@ -1221,12 +1221,13 @@ MonoBehaviour:
     divided into three classes Royalty, Nobility and the Serfs. Nobles and Serfs
     at a young age are forced to get neural chip implants that survey their thoughts,
     stripping away all free will and agency.\r\n\r\nJames Grant is a young Royale
-    who learns the stories of John Barlow and Michelle, a Serf and Noble who sacrificed
-    themselves in order to send a message to the citizens of the world and spark
-    change. After hearing the plight of the lower classes James decides it\u2019s
-    time to change things the only way he can. \n\nIt\u2019s time to rise in influence
-    among the Royal Governing Board and take action on the dilemmas facing the world
-    and improve the state of the world and create a bright future for the people!\r\n"
+    who learns the stories of John Barlow and Michelle Gardner, a Serf and Noble
+    who sacrificed themselves in order to send a message to the citizens of the world
+    and spark change. After hearing the plight of the lower classes James decides
+    it\u2019s time to change things the only way he can. \n\nIt\u2019s time to rise
+    in influence among the Royal Governing Board and take action on the dilemmas
+    facing the world and improve the state of the world and create a bright future
+    for the people!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd7ee6b00b64ed84ab0acb0edd1788fb, type: 2}
   m_sharedMaterial: {fileID: 6399875562504408793, guid: bd7ee6b00b64ed84ab0acb0edd1788fb,
