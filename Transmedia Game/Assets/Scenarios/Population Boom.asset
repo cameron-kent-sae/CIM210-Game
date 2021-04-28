@@ -18,14 +18,14 @@ MonoBehaviour:
     be directed from other classes, or a more forceful solution could be found such
     as medical intervention or population control media.
 
-    A: Redirect Noble Food
+    A: Redirect Noble food
 
     B:
-    Covertly Reduce Fertility
+    Covertly reduce fertility
 
-    C: Release Propaganda
+    C: Release propaganda
 
-    D: Redirect Royal Food'
+    D: Redirect Royal food'
   scenarioButtons:
   - {fileID: 0}
   - {fileID: 0}
