@@ -137,7 +137,7 @@ public class ScenarioManager : MonoBehaviour
 
     void CalculatingVotes()
     {
-        countingVotesUIPanel.SetActive(true);
+        //countingVotesUIPanel.SetActive(true);
         countingVotesUI.SetActive(true);
 
         float timer = Random.Range(2f, 5f);
@@ -150,13 +150,13 @@ public class ScenarioManager : MonoBehaviour
         countingVotesUI.SetActive(false);
         votePassedUI.SetActive(true);
 
-        votePassedText.text = "Vote Passed: " + passedVote.name;
+        votePassedText.text = passedVote.name;
     }
 
     public void NextScenario()
     {
         votePassedUI.SetActive(false);
-        countingVotesUIPanel.SetActive(false);
+        //countingVotesUIPanel.SetActive(false);
 
         passedVote = null;
 

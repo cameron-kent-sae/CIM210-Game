@@ -479,9 +479,24 @@ PrefabInstance:
       objectReference: {fileID: 1612987599}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
+      propertyPath: votePassedUI
+      value: 
+      objectReference: {fileID: 1673342487}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: votePassedText
+      value: 
+      objectReference: {fileID: 704676983}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
       propertyPath: conditionSlider
       value: 
       objectReference: {fileID: 421624570}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: countingVotesUI
+      value: 
+      objectReference: {fileID: 1818257470}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
       propertyPath: influenceSlider
@@ -497,6 +512,11 @@ PrefabInstance:
       propertyPath: buttons.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: countingVotesUIPanel
+      value: 
+      objectReference: {fileID: 1556799833}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
       propertyPath: scenarios.Array.size
@@ -3492,7 +3512,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 585641174}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 110327815}
+        m_MethodName: NextScenario
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &585641174
 MonoBehaviour:
   m_ObjectHideFlags: 0
