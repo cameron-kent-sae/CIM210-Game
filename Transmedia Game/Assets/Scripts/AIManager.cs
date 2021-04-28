@@ -24,6 +24,9 @@ public class AIManager : MonoBehaviour
     public GoverningBoardManager gBManager;
     public TMP_Text[] AiTitles;
     public Image[] AiImages;
+
+    [Header("Dialog Elements")]
+    public int maxNumberOfDialogIcons = 2;
     public GameObject[] dialogeIcons;
     public GameObject dialogFrame;
     public Image dialogFrameImage;
@@ -217,6 +220,7 @@ public class AIManager : MonoBehaviour
 
     void UpdateDialogeIcon()
     {
+        /*
         for(int i = 0; i < gBManager.characters.Count; i++)
         {
             if(gBManager.characters[i].characterName != playerStats.characterName)
@@ -227,6 +231,26 @@ public class AIManager : MonoBehaviour
             {
                 dialogeIcons[i].SetActive(false);
             }
+        }
+        */
+        List<GameObject> dialogsToLoad = new List<GameObject>();
+
+        dialogsToLoad.AddRange(dialogeIcons);
+
+        int randomNumber = Random.Range(1, maxNumberOfDialogIcons + 1);
+
+        for (int i = 0; i < randomNumber; i++)
+        {
+            int rand = Random.Range(0, dialogsToLoad.Count);
+
+            dialogeIcons[rand].SetActive(true);
+
+            dialogsToLoad.RemoveAt(rand);
+        }
+
+        foreach(GameObject icon in dialogsToLoad)
+        {
+            icon.SetActive(false);
         }
     }
 
@@ -243,6 +267,11 @@ public class AIManager : MonoBehaviour
         dialogFrameFlavourText.text = "I will be voting " + gBManager.characters[i].buttonChoice.name;
 
         dialogFrameVoteEffect.text = gBManager.characters[i].buttonChoice.name + " will effect: INF " + gBManager.characters[i].buttonChoice.baseInfluence + " / CON " + gBManager.characters[i].buttonChoice.baseCondition;
+    }
+
+    public void CloseDialogUI()
+    {
+        dialogFrame.SetActive(false);
     }
 
     public List<CharacterStats> GetAisInPlay()
