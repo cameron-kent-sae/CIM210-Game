@@ -583,6 +583,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 32b2fa812603c8c42b9ef5a92c75661c,
         type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: countingVotesRotatingThing
+      value: 
+      objectReference: {fileID: 1218373865}
     - target: {fileID: 565526757635826921, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
       propertyPath: m_Name

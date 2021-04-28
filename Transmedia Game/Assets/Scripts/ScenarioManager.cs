@@ -29,6 +29,7 @@ public class ScenarioManager : MonoBehaviour
     [Header("Counting Votes UI")]
     public GameObject countingVotesUIPanel;
     public GameObject countingVotesUI;
+    public IconRotator countingVotesRotatingThing;
     public GameObject votePassedUI;
     public TMP_Text votePassedText;
     private ScenarioButton passedVote;
@@ -137,8 +138,8 @@ public class ScenarioManager : MonoBehaviour
 
     void CalculatingVotes()
     {
-        //countingVotesUIPanel.SetActive(true);
         countingVotesUI.SetActive(true);
+        countingVotesRotatingThing.BeginRotation();
 
         float timer = Random.Range(2f, 5f);
 
@@ -156,7 +157,6 @@ public class ScenarioManager : MonoBehaviour
     public void NextScenario()
     {
         votePassedUI.SetActive(false);
-        //countingVotesUIPanel.SetActive(false);
 
         passedVote = null;
 
