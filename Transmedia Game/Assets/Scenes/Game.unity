@@ -568,6 +568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScenarioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 565526757635826921, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f23b44e9511244974e027f2d3ef4e, type: 3}
 --- !u!114 &110327815 stripped
@@ -7344,6 +7349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AI Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039693502720716498, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
         type: 3}

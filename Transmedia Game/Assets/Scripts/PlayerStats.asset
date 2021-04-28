@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: James Grant
   characterSprite: {fileID: 21300000, guid: 459fc0fdffaf0da4fb100025dd9949f6, type: 3}
-  startingInfluence: 1
+  startingInfluence: 120
   influence: 1
   influenceMultiplier: 1
   influenceUpConditionUp: 1

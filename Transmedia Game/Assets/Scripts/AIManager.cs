@@ -50,7 +50,7 @@ public class AIManager : MonoBehaviour
         {
             int rand = Random.Range(0, aiCharactersToSpawn.Count);
 
-            Debug.Log("AI Manager: random number: " + rand);
+            //Debug.Log("AI Manager: random number: " + rand);
 
             if (aiCharactersInPlay.Count == 0)
             {
@@ -62,7 +62,7 @@ public class AIManager : MonoBehaviour
             }
         }
 
-        AddAICharacter(playerStats);
+        //AddAICharacter(playerStats);
         SortCharacters();
     }
 
@@ -73,7 +73,7 @@ public class AIManager : MonoBehaviour
 
         character.influence = character.startingInfluence;
 
-        Debug.Log("AI Manager: add character: " + character);
+        //Debug.Log("AI Manager: add character: " + character);
 
         numberOfgeneratedCharacters++;
     }
@@ -88,7 +88,7 @@ public class AIManager : MonoBehaviour
             }
             else
             {
-                aiCharactersInPlay[i].influence -= 15;
+                aiCharactersInPlay[i].influence -= 5;
             }
         }
 
@@ -100,7 +100,7 @@ public class AIManager : MonoBehaviour
         Debug.Log("AI Manager: Sort characters");
 
         charactersInPlay = aiCharactersInPlay;
-        //charactersInPlay.Add(playerStats);
+        charactersInPlay.Add(playerStats);
 
         charactersInPlay.Sort(SortByInfluence);
 
@@ -127,6 +127,8 @@ public class AIManager : MonoBehaviour
             AiTitles[i].text = charactersInPlay[i].characterName;
             AiImages[i].sprite = charactersInPlay[i].characterSprite;
         }
+
+        charactersInPlay.Remove(playerStats);
     }
 
     int SortByInfluence(CharacterStats ai1, CharacterStats ai2)
@@ -190,7 +192,7 @@ public class AIManager : MonoBehaviour
 
                 counter += buttonChance[i];
 
-                Debug.Log("AI Manager: ai: " + ai + ", total chance weighting: " + totalChanceWeighting + ", i: " + i + " / " + buttonChance.Count);
+                //Debug.Log("AI Manager: ai: " + ai + ", total chance weighting: " + totalChanceWeighting + ", i: " + i + " / " + buttonChance.Count);
             }
         }
 

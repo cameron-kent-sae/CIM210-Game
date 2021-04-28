@@ -17,7 +17,7 @@ public class ScenarioManager : MonoBehaviour
     [Header("Player")]
     public CharacterStats playerStats;
 
-    public int startingInfluence = 0;
+    public int startingInfluence = 1;
     public int maxInfluence = 100;
     public float startingCondition = 0;
     private float condition = 50;
@@ -100,7 +100,7 @@ public class ScenarioManager : MonoBehaviour
         }
         else
         {
-            playerStats.influence -= 15;
+            //playerStats.influence -= 5;
         }
 
         condition += button.baseCondition;
@@ -171,9 +171,9 @@ public class ScenarioManager : MonoBehaviour
             float maxInfluence = aiInPlay[aiInPlay.Count - 1].influence;
             float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence));
 
-            Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
-            Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
-            Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
+            //Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
+            //Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
+            //Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
 
             //influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
             influenceSlider.fillAmount = relativeInfluence + 1;
