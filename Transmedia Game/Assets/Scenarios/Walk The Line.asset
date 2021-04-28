@@ -24,4 +24,7 @@ MonoBehaviour:
 
     C:
     Confiscate for Royal use'
-  scenarioButtons: []
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

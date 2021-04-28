@@ -12,6 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
   m_Name: A Warm Glow
   m_EditorClassIdentifier: 
-  scenarioTitle: New Scenario
-  scenarioText: Scenario Text
-  scenarioButtons: []
+  scenarioTitle: A Warm Glow
+  scenarioText: 'Radiation from old power stations is leaking into populated areas
+    which are causing minor health issue, however, it interferes with signals to
+    neural implants. If this fact is learnt some Serfs may use this intentionally
+    to block monitoring.
+
+    A: Fix the leak
+
+    B: Install signal boosters
+
+    C:
+    Quarantine the area
+
+    D: Increase security patrols'
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

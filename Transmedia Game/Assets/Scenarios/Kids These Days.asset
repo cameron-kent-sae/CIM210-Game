@@ -22,4 +22,6 @@ MonoBehaviour:
     be
 
     B: Reprimand the culprit'
-  scenarioButtons: []
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
