@@ -124,8 +124,8 @@ public class AIManager : MonoBehaviour
     {
         for(int i = 0; i < numberOfAICharacters; i++)
         {
-            AiTitles[i].text = charactersInPlay[i].characterName;
-            AiImages[i].sprite = charactersInPlay[i].characterSprite;
+            AiTitles[i].text = charactersInPlay[i + 1].characterName;
+            AiImages[i].sprite = charactersInPlay[i + 1].characterSprite;
         }
 
         charactersInPlay.Remove(playerStats);

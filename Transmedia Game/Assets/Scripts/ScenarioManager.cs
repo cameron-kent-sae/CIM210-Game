@@ -17,9 +17,8 @@ public class ScenarioManager : MonoBehaviour
     [Header("Player")]
     public CharacterStats playerStats;
 
-    public int startingInfluence = 1;
     public int maxInfluence = 100;
-    public float startingCondition = 0;
+    public float startingCondition = 50;
     private float condition = 50;
 
     [Header("UI")]
@@ -50,7 +49,7 @@ public class ScenarioManager : MonoBehaviour
 
     void SetStartingStats()
     {
-        playerStats.influence = startingInfluence;
+        playerStats.influence = playerStats.startingInfluence;
 
         condition = startingCondition;
     }
@@ -64,13 +63,14 @@ public class ScenarioManager : MonoBehaviour
 
     public void PlayerOption(ScenarioButton button)
     {
-        Debug.Log("Scenario Manager: Player Option, button: " + button);
+        Debug.Log("Scenario Manager: Player Input Button, button: " + button);
+
+        playerButtonChoice = button;
 
         AIChoice(button, playerStats.influenceMultiplier);
 
         aiManager.GenerateChoices(scenarios[0]);
-
-        playerButtonChoice = button;
+        Debug.Log("Scenario Manager: Player Button Choice: " + playerButtonChoice);
     }
 
     public void GenerateScenarioOutcome()
@@ -87,7 +87,7 @@ public class ScenarioManager : MonoBehaviour
 
     void FinishScenario(ScenarioButton button)
     {
-        Debug.Log("Scenario Manager: Finish Scenario, Button: " + button);
+        Debug.Log("Scenario Manager: Finish Scenario, Button: " + button + ", Player's Button: " + playerButtonChoice);
 
         if (playerButtonChoice == button)
         {
@@ -100,7 +100,7 @@ public class ScenarioManager : MonoBehaviour
         }
         else
         {
-            //playerStats.influence -= 5;
+            playerStats.influence -= 5;
         }
 
         condition += button.baseCondition;
