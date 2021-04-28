@@ -6,6 +6,11 @@ public class IconRotator : MonoBehaviour
 {
     private void Start()
     {
+        BeginRotation();
+    }
+
+    public void BeginRotation()
+    {
         StartCoroutine(RotateObject(90, Vector3.back, 0.5f));
     }
 
