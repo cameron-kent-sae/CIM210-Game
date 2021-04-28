@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4039693502720716498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4039693502720716496}
+  - component: {fileID: 4039693502720716499}
+  m_Layer: 0
+  m_Name: AI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4039693502720716496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039693502720716498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4039693502720716499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039693502720716498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5abbab882c23d445a85fcd79fb59a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioManager: {fileID: 0}
+  playerStats: {fileID: 11400000, guid: 0b2e316d53f06054bbfca36b45f42e76, type: 2}
+  aiCharacters:
+  - {fileID: 11400000, guid: 430c0f92204f2084698f97b76aaf61c6, type: 2}
+  - {fileID: 11400000, guid: 11081a329873f78438ffbe1a0b576c0c, type: 2}
+  - {fileID: 11400000, guid: 9c38dc803a5a7734fb54e33c33561121, type: 2}
+  - {fileID: 11400000, guid: 33c35a7bc5afc9749a54653bf0a04334, type: 2}
+  - {fileID: 11400000, guid: a56ab9f45bd5ebd44965fbc4e6e78efa, type: 2}
+  - {fileID: 11400000, guid: b8c9a40d70d869d4088b14326e3bcbcd, type: 2}
+  - {fileID: 11400000, guid: a951bfab1943620498b5b528ef5cc1a0, type: 2}
+  - {fileID: 11400000, guid: 3e69d8e0568f1384ebec5ec78516d736, type: 2}
+  - {fileID: 11400000, guid: 05f1ba9bee54eb448801ab729a508620, type: 2}
+  numberOfAICharacters: 6

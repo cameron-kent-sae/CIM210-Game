@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
-  m_Name: AI 6
+  m_Name: Mikolaj Brewer
   m_EditorClassIdentifier: 
   characterName: Daniel
   characterSprite: {fileID: 0}
