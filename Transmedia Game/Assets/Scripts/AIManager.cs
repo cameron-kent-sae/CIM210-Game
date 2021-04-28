@@ -62,6 +62,8 @@ public class AIManager : MonoBehaviour
             }
         }
 
+        AddAICharacter(playerStats);
+
         SortCharacters();
     }
 
@@ -97,7 +99,7 @@ public class AIManager : MonoBehaviour
         Debug.Log("AI Manager: Sort characters");
 
         charactersInPlay = aiCharactersInPlay;
-        charactersInPlay.Add(playerStats);
+        //charactersInPlay.Add(playerStats);
 
         charactersInPlay.Sort(SortByInfluence);
 

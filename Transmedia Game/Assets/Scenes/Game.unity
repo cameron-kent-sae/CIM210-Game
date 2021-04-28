@@ -499,6 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
+      propertyPath: scenarios.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
       propertyPath: buttons.Array.data[0]
       value: 
       objectReference: {fileID: 498271404}
@@ -522,6 +527,42 @@ PrefabInstance:
       propertyPath: scenarioDiscriptionText
       value: 
       objectReference: {fileID: 305276227}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 744615a1d1d626744994c3a381e78642,
+        type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7ed2bc8d48f6ec345b6efccce22f306e,
+        type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: a013834387fafbf49a123d8d203e703f,
+        type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 33dea4040b4f55d41b8252d4f9c2299d,
+        type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2eb3c72f9fdc86c4aba4c78f50a0f018,
+        type: 2}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: scenarios.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 32b2fa812603c8c42b9ef5a92c75661c,
+        type: 2}
     - target: {fileID: 565526757635826921, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
       propertyPath: m_Name
@@ -2691,6 +2732,7 @@ GameObject:
   - component: {fileID: 498271408}
   - component: {fileID: 498271407}
   - component: {fileID: 498271406}
+  - component: {fileID: 498271410}
   m_Layer: 5
   m_Name: VoteA
   m_TagString: Untagged
@@ -2793,6 +2835,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 498271410}
+        m_MethodName: ButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &498271408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2830,6 +2883,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498271404}
   m_CullTransparentMesh: 0
+--- !u!114 &498271410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498271404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d6e98b8176cc04995fcc93dae64397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioButton: {fileID: 0}
+  scenarioManager: {fileID: 0}
 --- !u!1 &568331757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5756,6 +5823,7 @@ GameObject:
   - component: {fileID: 1160232400}
   - component: {fileID: 1160232399}
   - component: {fileID: 1160232398}
+  - component: {fileID: 1160232402}
   m_Layer: 5
   m_Name: VoteD
   m_TagString: Untagged
@@ -5858,6 +5926,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1160232402}
+        m_MethodName: ButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1160232400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5895,6 +5974,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160232396}
   m_CullTransparentMesh: 0
+--- !u!114 &1160232402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160232396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d6e98b8176cc04995fcc93dae64397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioButton: {fileID: 0}
+  scenarioManager: {fileID: 0}
 --- !u!1 &1206306506
 GameObject:
   m_ObjectHideFlags: 0
@@ -6767,6 +6860,7 @@ GameObject:
   - component: {fileID: 1468784572}
   - component: {fileID: 1468784571}
   - component: {fileID: 1468784570}
+  - component: {fileID: 1468784574}
   m_Layer: 5
   m_Name: VoteC
   m_TagString: Untagged
@@ -6869,6 +6963,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1468784574}
+        m_MethodName: ButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1468784572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6906,6 +7011,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468784568}
   m_CullTransparentMesh: 0
+--- !u!114 &1468784574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468784568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d6e98b8176cc04995fcc93dae64397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioButton: {fileID: 0}
+  scenarioManager: {fileID: 0}
 --- !u!1 &1545832439
 GameObject:
   m_ObjectHideFlags: 0
@@ -9090,6 +9209,7 @@ GameObject:
   - component: {fileID: 1916092733}
   - component: {fileID: 1916092732}
   - component: {fileID: 1916092731}
+  - component: {fileID: 1916092735}
   m_Layer: 5
   m_Name: VoteB
   m_TagString: Untagged
@@ -9192,6 +9312,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1916092735}
+        m_MethodName: ButtonSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1916092733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9229,6 +9360,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916092729}
   m_CullTransparentMesh: 0
+--- !u!114 &1916092735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916092729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d6e98b8176cc04995fcc93dae64397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarioButton: {fileID: 0}
+  scenarioManager: {fileID: 0}
 --- !u!1 &1944445880
 GameObject:
   m_ObjectHideFlags: 0
