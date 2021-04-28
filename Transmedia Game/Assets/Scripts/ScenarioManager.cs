@@ -138,6 +138,8 @@ public class ScenarioManager : MonoBehaviour
 
     void CalculatingVotes()
     {
+        aiManager.ResetDialogeUI();
+
         countingVotesUI.SetActive(true);
         countingVotesRotatingThing.BeginRotation();
 
@@ -184,6 +186,7 @@ public class ScenarioManager : MonoBehaviour
     {
         if (influenceSlider)
         {
+            
             List<CharacterStats> aiList = new List<CharacterStats>();
             List<CharacterStats> aiInPlay = new List<CharacterStats>();
             aiList = aiManager.GetAisInPlay();
@@ -202,8 +205,10 @@ public class ScenarioManager : MonoBehaviour
             Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
             Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
 
+            float influenceValue = playerStats.influence / maxInfluence;
+
             //influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
-            influenceSlider.fillAmount = relativeInfluence;
+            influenceSlider.fillAmount = influenceValue;
         }
         else
         {

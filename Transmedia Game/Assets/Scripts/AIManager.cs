@@ -136,13 +136,13 @@ public class AIManager : MonoBehaviour
 
     void UpdateAIUI()
     {
-        for(int i = 0; i < numberOfAICharacters; i++)
-        {
-            AiTitles[i].text = charactersInPlay[i + 1].characterName;
-            AiImages[i].sprite = charactersInPlay[i + 1].characterSprite;
-        }
-
         charactersInPlay.Remove(playerStats);
+
+        for (int i = 0; i < numberOfAICharacters; i++)
+        {
+            AiTitles[i].text = charactersInPlay[i].characterName;
+            AiImages[i].sprite = charactersInPlay[i].characterSprite;
+        }
     }
 
     int SortByInfluence(CharacterStats ai1, CharacterStats ai2)
@@ -221,7 +221,6 @@ public class AIManager : MonoBehaviour
         {
             if(gBManager.characters[i].characterName != playerStats.characterName)
             {
-                // READ YOU STUPID IDIOT! If it's not working correctly, dialouge icons might be set in the wrong order in the array !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 dialogeIcons[i].SetActive(true);
             }
             else
@@ -229,6 +228,11 @@ public class AIManager : MonoBehaviour
                 dialogeIcons[i].SetActive(false);
             }
         }
+    }
+
+    public void ResetDialogeUI()
+    {
+        dialogFrame.SetActive(false);
     }
 
     public void OpenDialogUI(int i)
