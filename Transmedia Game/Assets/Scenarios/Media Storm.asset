@@ -24,6 +24,6 @@ MonoBehaviour:
 
     C: Just repair damage'
   scenarioButtons:
-  - {fileID: 11400000, guid: dc7282ff8db684a4c9a203de810f7927, type: 2}
-  - {fileID: 11400000, guid: ccebf3606c691044bad3ed54ca297251, type: 2}
-  - {fileID: 11400000, guid: 8009969523e6e034d8df1ad0cd8ee05a, type: 2}
+  - {fileID: 11400000, guid: 1be3d49a7389fb546afd8573270a66cd, type: 2}
+  - {fileID: 11400000, guid: 9e5a3eb22b5636f44aa7c542e726e9c8, type: 2}
+  - {fileID: 11400000, guid: 78b471f7236d1b945bb399db269f116f, type: 2}

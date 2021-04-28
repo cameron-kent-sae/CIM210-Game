@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f19c906f28c5f4985ba9ed53298477, type: 3}
   m_Name: A
   m_EditorClassIdentifier: 
-  buttonText: 
-  baseInfluence: 0
-  baseCondition: 0
-  voteCount: 0
+  buttonText: A
+  baseInfluence: 5
+  baseCondition: -5
+  voteCount: 7
