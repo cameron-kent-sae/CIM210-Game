@@ -197,6 +197,7 @@ public class AIManager : MonoBehaviour
                     scenarioManager.AIChoice(scenario.scenarioButtons[i], chance);
 
                     aiButtons.Add(scenario.scenarioButtons[i]);
+                    ai.buttonChoice = scenario.scenarioButtons[i];
                 }
 
                 counter += buttonChance[i];
@@ -230,8 +231,9 @@ public class AIManager : MonoBehaviour
         dialogFrame.SetActive(true);
         dialogFrameImage.sprite = gBManager.characters[i].characterSprite;
         dialogFrameTitle.text = gBManager.characters[i].characterName;
-        dialogFrameFlavourText.text = "Dialoge Number: " + i;
-        dialogFrameVoteEffect.text = "Dialoge Number: " + i;
+        dialogFrameFlavourText.text = "I will be voting " + gBManager.characters[i].buttonChoice.name;
+
+        dialogFrameVoteEffect.text = gBManager.characters[i].buttonChoice.name + " will effect: INF " + gBManager.characters[i].buttonChoice.baseInfluence + " / CON " + gBManager.characters[i].buttonChoice.baseCondition;
     }
 
     public List<CharacterStats> GetAisInPlay()

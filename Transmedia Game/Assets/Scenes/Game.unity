@@ -7432,9 +7432,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
         type: 3}
+      propertyPath: dialogFrame
+      value: 
+      objectReference: {fileID: 1020033174}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
       propertyPath: scenarioManager
       value: 
       objectReference: {fileID: 110327815}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: dialogFrameImage
+      value: 
+      objectReference: {fileID: 1890199758}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: dialogFrameTitle
+      value: 
+      objectReference: {fileID: 353817969}
     - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
         type: 3}
       propertyPath: AiImages.Array.size
@@ -7445,6 +7460,11 @@ PrefabInstance:
       propertyPath: AiTitles.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: dialogFrameVoteEffect
+      value: 
+      objectReference: {fileID: 129666693}
     - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
         type: 3}
       propertyPath: AiImages.Array.data[0]
@@ -7505,6 +7525,11 @@ PrefabInstance:
       propertyPath: AiTitles.Array.data[5]
       value: 
       objectReference: {fileID: 1096745951}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: dialogFrameFlavourText
+      value: 
+      objectReference: {fileID: 30054258}
     - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
         type: 3}
       propertyPath: dialogeIcons.Array.size
@@ -10079,13 +10104,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 803263312}
-        m_MethodName: ButtonSelected
-        m_Mode: 1
+      - m_Target: {fileID: 1612987599}
+        m_MethodName: OpenDialogUI
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

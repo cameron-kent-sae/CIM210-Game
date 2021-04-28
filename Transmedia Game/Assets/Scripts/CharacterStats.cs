@@ -14,6 +14,8 @@ public class CharacterStats : ScriptableObject
     public float influence = 10;
     public int influenceMultiplier = 1;
 
+    [HideInInspector] public ScenarioButton buttonChoice;
+
     [Header("Favor Bias")]
     [Range(-100, 100)] public float influenceUpConditionUp;
     [Range(-100, 100)] public float influenceDownConditionUDown;
