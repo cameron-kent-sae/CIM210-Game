@@ -18,12 +18,12 @@ MonoBehaviour:
     Serf or Noble industries reducing their work hours or as extra robotic servants
     for the Royal class.
 
-    A: New Robotic Servants
+    A: New Robotic servants
 
-    B: Support Noble Class
+    B: Support Noble class
 
     C:
-    Support Serf Class'
+    Support Serf class'
   scenarioButtons:
   - {fileID: 0}
   - {fileID: 0}
