@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: D
   m_EditorClassIdentifier: 
   buttonText: D
-  baseInfluence: 10
-  baseCondition: 10
+  baseInfluence: -10
+  baseCondition: 15
   voteCount: 0

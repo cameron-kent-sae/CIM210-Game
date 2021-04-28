@@ -56,3 +56,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3e69d8e0568f1384ebec5ec78516d736, type: 2}
   - {fileID: 11400000, guid: 05f1ba9bee54eb448801ab729a508620, type: 2}
   numberOfAICharacters: 6
+  gBManager: {fileID: 11400000, guid: f0476218104e2784a86dc1650d7395d7, type: 2}
+  AiTitles: []
+  AiImages: []
+  dialogeIcons: []
+  dialogFrame: {fileID: 0}
+  dialogFrameImage: {fileID: 0}
+  dialogFrameTitle: {fileID: 0}
+  dialogFrameFlavourText: {fileID: 0}
+  dialogFrameVoteEffect: {fileID: 0}

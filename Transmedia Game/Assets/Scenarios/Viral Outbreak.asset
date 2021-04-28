@@ -22,5 +22,5 @@ MonoBehaviour:
 
     B: Don''t Interfere'
   scenarioButtons:
-  - {fileID: 11400000, guid: dc7282ff8db684a4c9a203de810f7927, type: 2}
-  - {fileID: 11400000, guid: ccebf3606c691044bad3ed54ca297251, type: 2}
+  - {fileID: 11400000, guid: f9f0a13e835301d4aa1073bb20ac0a45, type: 2}
+  - {fileID: 11400000, guid: 712db183801d67e429e6779462246e01, type: 2}

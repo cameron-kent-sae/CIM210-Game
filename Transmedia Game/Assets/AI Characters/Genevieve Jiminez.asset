@@ -17,7 +17,7 @@ MonoBehaviour:
   startingInfluence: 15
   influence: 15
   influenceMultiplier: 1
-  influenceUpConditionUp: 47
-  influenceDownConditionUDown: 22
-  influenceUpConditionDown: 39
-  influenceDownConditionUp: -25
+  influenceUpConditionUp: -38.2
+  influenceDownConditionUDown: 1
+  influenceUpConditionDown: 20.5
+  influenceDownConditionUp: 33.4

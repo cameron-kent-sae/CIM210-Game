@@ -27,7 +27,7 @@ MonoBehaviour:
 
     D: Lower graduation year'
   scenarioButtons:
-  - {fileID: 11400000, guid: dc7282ff8db684a4c9a203de810f7927, type: 2}
-  - {fileID: 11400000, guid: ccebf3606c691044bad3ed54ca297251, type: 2}
-  - {fileID: 11400000, guid: 8009969523e6e034d8df1ad0cd8ee05a, type: 2}
-  - {fileID: 11400000, guid: 4e692d43370f7b04486f8fb38e1b32c8, type: 2}
+  - {fileID: 11400000, guid: a32aca366bad4b84baaabfb6838f0c1e, type: 2}
+  - {fileID: 11400000, guid: 90263409fa59f9644b39d64a5aa427cc, type: 2}
+  - {fileID: 11400000, guid: 1bf95c5a3f398934da89e3fb0960c7c0, type: 2}
+  - {fileID: 11400000, guid: 8d820a0141a17cb4f83f705586011c3a, type: 2}

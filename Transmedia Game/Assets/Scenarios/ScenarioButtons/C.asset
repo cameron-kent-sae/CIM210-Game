@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: C
   baseInfluence: 15
-  baseCondition: 15
+  baseCondition: -15
   voteCount: 0

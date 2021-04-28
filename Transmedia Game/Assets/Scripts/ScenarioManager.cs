@@ -43,7 +43,8 @@ public class ScenarioManager : MonoBehaviour
     {
         uIButtons = new List<GameObject>();
 
-        LoadNextScenario();
+        //LoadNextScenario();
+        Invoke("LoadNextScenario", 0.1f);
         SetStartingStats();
     }
 
@@ -69,7 +70,9 @@ public class ScenarioManager : MonoBehaviour
 
         AIChoice(button, playerStats.influenceMultiplier);
 
-        aiManager.GenerateChoices(scenarios[0]);
+        //aiManager.GenerateChoices(scenarios[0]);
+
+        GenerateScenarioOutcome();
         Debug.Log("Scenario Manager: Player Button Choice: " + playerButtonChoice);
     }
 
@@ -243,6 +246,8 @@ public class ScenarioManager : MonoBehaviour
             {
                 Debug.LogError("Missing buttons, current number of buttons = " + buttons.Length);
             }
+
+            aiManager.GenerateChoices(scenarios[0]);
         }
         else
         {

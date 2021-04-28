@@ -21,8 +21,15 @@ public class AIManager : MonoBehaviour
     private List<ScenarioButton> aiButtons;
 
     [Header("UI Elements")]
+    public GoverningBoardManager gBManager;
     public TMP_Text[] AiTitles;
     public Image[] AiImages;
+    public GameObject[] dialogeIcons;
+    public GameObject dialogFrame;
+    public Image dialogFrameImage;
+    public TMP_Text dialogFrameTitle;
+    public TMP_Text dialogFrameFlavourText;
+    public TMP_Text dialogFrameVoteEffect;
 
     private void Start()
     {
@@ -104,6 +111,8 @@ public class AIManager : MonoBehaviour
 
         charactersInPlay.Sort(SortByInfluence);
 
+        gBManager.characters = aiCharactersInPlay;
+
         // Set influence multipliers
         charactersInPlay[charactersInPlay.Count - 1].influenceMultiplier = 3;
         charactersInPlay[charactersInPlay.Count - 2].influenceMultiplier = 2;
@@ -142,7 +151,7 @@ public class AIManager : MonoBehaviour
 
         aiButtons.Clear();
 
-        foreach(CharacterStats ai in aiCharactersInPlay)
+        foreach (CharacterStats ai in aiCharactersInPlay)
         {
             List<float> buttonChance = new List<float>();
 
@@ -188,6 +197,7 @@ public class AIManager : MonoBehaviour
                     scenarioManager.AIChoice(scenario.scenarioButtons[i], chance);
 
                     aiButtons.Add(scenario.scenarioButtons[i]);
+                    ai.buttonChoice = scenario.scenarioButtons[i];
                 }
 
                 counter += buttonChance[i];
@@ -196,7 +206,34 @@ public class AIManager : MonoBehaviour
             }
         }
 
-        scenarioManager.GenerateScenarioOutcome();
+        UpdateDialogeIcon();
+        //scenarioManager.GenerateScenarioOutcome();
+    }
+
+    void UpdateDialogeIcon()
+    {
+        for(int i = 0; i < gBManager.characters.Count; i++)
+        {
+            if(gBManager.characters[i].characterName != playerStats.characterName)
+            {
+                // READ YOU STUPID IDIOT! If it's not working correctly, dialouge icons might be set in the wrong order in the array !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                dialogeIcons[i].SetActive(true);
+            }
+            else
+            {
+                dialogeIcons[i].SetActive(false);
+            }
+        }
+    }
+
+    public void OpenDialogUI(int i)
+    {
+        dialogFrame.SetActive(true);
+        dialogFrameImage.sprite = gBManager.characters[i].characterSprite;
+        dialogFrameTitle.text = gBManager.characters[i].characterName;
+        dialogFrameFlavourText.text = "I will be voting " + gBManager.characters[i].buttonChoice.name;
+
+        dialogFrameVoteEffect.text = gBManager.characters[i].buttonChoice.name + " will effect: INF " + gBManager.characters[i].buttonChoice.baseInfluence + " / CON " + gBManager.characters[i].buttonChoice.baseCondition;
     }
 
     public List<CharacterStats> GetAisInPlay()
