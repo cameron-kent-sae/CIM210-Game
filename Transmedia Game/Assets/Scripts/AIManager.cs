@@ -221,7 +221,6 @@ public class AIManager : MonoBehaviour
         {
             if(gBManager.characters[i].characterName != playerStats.characterName)
             {
-                // READ YOU STUPID IDIOT! If it's not working correctly, dialouge icons might be set in the wrong order in the array !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 dialogeIcons[i].SetActive(true);
             }
             else
@@ -229,6 +228,11 @@ public class AIManager : MonoBehaviour
                 dialogeIcons[i].SetActive(false);
             }
         }
+    }
+
+    public void ResetDialogeUI()
+    {
+        dialogFrame.SetActive(false);
     }
 
     public void OpenDialogUI(int i)
