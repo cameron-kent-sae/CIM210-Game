@@ -15,6 +15,8 @@ public class ScenarioManager : MonoBehaviour
     public int winConditionLevel = 100;
     public int loseConditionLevel = 0;
 
+    public AudioManager audioManager;
+
     [Header("Player")]
     public CharacterStats playerStats;
 
@@ -186,7 +188,6 @@ public class ScenarioManager : MonoBehaviour
     {
         if (influenceSlider)
         {
-            
             List<CharacterStats> aiList = new List<CharacterStats>();
             List<CharacterStats> aiInPlay = new List<CharacterStats>();
             aiList = aiManager.GetAisInPlay();
@@ -231,7 +232,9 @@ public class ScenarioManager : MonoBehaviour
         Debug.Log("Scenario Manager: Scenarios Count:" + scenarios.Count);
 
         if (scenarios.Count > 0)
-        {            
+        {
+            audioManager.PlayRandomAudio();
+
             playerButtonChoice = null;
 
             scenarioTitleText.text = scenarios[0].scenarioTitle;

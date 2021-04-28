@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        PlayRandomAudio();
+        //PlayRandomAudio();
     }
 
     public void PlayRandomAudio()

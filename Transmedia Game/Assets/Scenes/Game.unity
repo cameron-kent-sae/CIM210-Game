@@ -479,6 +479,11 @@ PrefabInstance:
       objectReference: {fileID: 1612987599}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 434633665}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
       propertyPath: votePassedUI
       value: 
       objectReference: {fileID: 1673342487}
