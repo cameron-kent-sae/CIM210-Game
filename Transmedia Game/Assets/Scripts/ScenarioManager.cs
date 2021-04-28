@@ -25,8 +25,14 @@ public class ScenarioManager : MonoBehaviour
     public Image influenceSlider;
     public Image conditionSlider;
 
+    [Header("Counting Votes UI")]
+    public GameObject countingVotesUIPanel;
+    public GameObject countingVotesUI;
+    public GameObject votePassedUI;
+    public TMP_Text votePassedText;
+    private ScenarioButton passedVote;
+
     [Header("Buttons")]
-    //public GameObject buttonsPrefab;
     public GameObject[] buttons;
 
     [Header("Text")]
@@ -92,6 +98,8 @@ public class ScenarioManager : MonoBehaviour
     {
         Debug.Log("Scenario Manager: Finish Scenario, Button: " + button + ", Player's Button: " + playerButtonChoice);
 
+        passedVote = button;
+
         if (playerButtonChoice == button)
         {
             playerStats.influence += button.baseInfluence;
@@ -104,6 +112,11 @@ public class ScenarioManager : MonoBehaviour
         else
         {
             playerStats.influence -= 5;
+        }
+
+        if(playerStats.influence < 0)
+        {
+            playerStats.influence = 0;
         }
 
         condition += button.baseCondition;
@@ -121,6 +134,34 @@ public class ScenarioManager : MonoBehaviour
         }
 
         uIButtons.Clear();
+
+        CalculatingVotes();
+    }
+
+    void CalculatingVotes()
+    {
+        countingVotesUIPanel.SetActive(true);
+        countingVotesUI.SetActive(true);
+
+        float timer = 1 + Random.Range(-1f, 3f);
+
+        Invoke("VotePassed", timer);
+    }
+
+    void VotePassed()
+    {
+        countingVotesUI.SetActive(false);
+        votePassedUI.SetActive(true);
+
+        votePassedText.text = "Vote Passed: " + passedVote.name;
+    }
+
+    public void NextScenario()
+    {
+        votePassedUI.SetActive(false);
+        countingVotesUIPanel.SetActive(false);
+
+        passedVote = null;
 
         UpdateUISliders();
         CheckForWin();

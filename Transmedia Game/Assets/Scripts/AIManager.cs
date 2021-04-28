@@ -87,15 +87,20 @@ public class AIManager : MonoBehaviour
 
     public void UpdateAiStats(ScenarioButton button)
     {
-        for(int i = 0; i < aiCharactersInPlay.Count; i++)
+        for (int i = 0; i < aiCharactersInPlay.Count; i++)
         {
-            if(aiButtons[i] == button)
+            if (aiButtons[i] == button)
             {
                 aiCharactersInPlay[i].influence += button.baseInfluence;
             }
             else
             {
                 aiCharactersInPlay[i].influence -= 5;
+            }
+
+            if (aiCharactersInPlay[i].influence < 0)
+            {
+                aiCharactersInPlay[i].influence = 0;
             }
         }
 
