@@ -169,14 +169,14 @@ public class ScenarioManager : MonoBehaviour
 
             float minInfluence = aiInPlay[0].influence;
             float maxInfluence = aiInPlay[aiInPlay.Count - 1].influence;
-            float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence)) * 100;
+            float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence));
 
             Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
             Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
             Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
 
             //influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
-            influenceSlider.fillAmount = relativeInfluence;
+            influenceSlider.fillAmount = relativeInfluence + 1;
         }
         else
         {
