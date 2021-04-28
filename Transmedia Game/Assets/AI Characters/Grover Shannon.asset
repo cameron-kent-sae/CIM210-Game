@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Grover Shannon
   characterSprite: {fileID: 21300000, guid: 2ac3534fb1a3e5e41b8ad560296d8123, type: 3}
-  influence: 10
+  startingInfluence: 17
+  influence: -28
   influenceMultiplier: 1
   influenceUpConditionUp: 30.8
   influenceDownConditionUDown: -35.9

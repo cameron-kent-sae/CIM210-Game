@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Leroy Holloway
   characterSprite: {fileID: 21300000, guid: 4e0c5976b46d2904f8dd59813dc0c60b, type: 3}
-  influence: 27.1
-  influenceMultiplier: 3
+  startingInfluence: 20
+  influence: 20
+  influenceMultiplier: 2
   influenceUpConditionUp: 43.7
   influenceDownConditionUDown: -41.6
   influenceUpConditionDown: 45.3

@@ -63,7 +63,6 @@ public class AIManager : MonoBehaviour
         }
 
         AddAICharacter(playerStats);
-
         SortCharacters();
     }
 
@@ -71,6 +70,8 @@ public class AIManager : MonoBehaviour
     {
         aiCharactersInPlay.Add(character);
         aiCharactersToSpawn.Remove(character);
+
+        character.influence = character.startingInfluence;
 
         Debug.Log("AI Manager: add character: " + character);
 
@@ -194,5 +195,10 @@ public class AIManager : MonoBehaviour
         }
 
         scenarioManager.GenerateScenarioOutcome();
+    }
+
+    public List<CharacterStats> GetAisInPlay()
+    {
+        return aiCharactersInPlay;
     }
 }

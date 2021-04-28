@@ -155,7 +155,28 @@ public class ScenarioManager : MonoBehaviour
     {
         if (influenceSlider)
         {
-            influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
+            List<CharacterStats> aiList = new List<CharacterStats>();
+            List<CharacterStats> aiInPlay = new List<CharacterStats>();
+            aiList = aiManager.GetAisInPlay();
+            
+            foreach(CharacterStats character in aiList)
+            {
+                if(character != playerStats)
+                {
+                    aiInPlay.Add(character);
+                }
+            }
+
+            float minInfluence = aiInPlay[0].influence;
+            float maxInfluence = aiInPlay[aiInPlay.Count - 1].influence;
+            float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence)) * 100;
+
+            Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
+            Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
+            Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
+
+            //influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
+            influenceSlider.fillAmount = relativeInfluence;
         }
         else
         {

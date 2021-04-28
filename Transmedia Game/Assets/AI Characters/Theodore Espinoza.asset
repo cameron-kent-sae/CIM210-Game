@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Theodore Espinoza
   characterSprite: {fileID: 21300000, guid: 02a220e4aff2d9e4a80e458fbcaaebbf, type: 3}
-  influence: 5
-  influenceMultiplier: 1
+  startingInfluence: 37
+  influence: 37
+  influenceMultiplier: 3
   influenceUpConditionUp: -75
   influenceDownConditionUDown: 50
   influenceUpConditionDown: 75

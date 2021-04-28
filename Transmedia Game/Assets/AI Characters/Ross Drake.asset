@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Ross Drake
   characterSprite: {fileID: 21300000, guid: cd54236a51897e5489b8c0e604dd8e16, type: 3}
-  influence: 25
-  influenceMultiplier: 1
+  startingInfluence: 25
+  influence: 10
+  influenceMultiplier: 2
   influenceUpConditionUp: -40
   influenceDownConditionUDown: 27.6
   influenceUpConditionDown: -28.7

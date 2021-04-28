@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Genevieve Jiminez
   characterSprite: {fileID: 21300000, guid: 419b32dd15ca85a409514a639e922ddc, type: 3}
-  influence: 10
+  startingInfluence: 15
+  influence: 15
   influenceMultiplier: 1
   influenceUpConditionUp: 47
   influenceDownConditionUDown: 22

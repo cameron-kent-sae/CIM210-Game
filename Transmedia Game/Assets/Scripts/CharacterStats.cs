@@ -10,6 +10,7 @@ public class CharacterStats : ScriptableObject
 
     public Sprite characterSprite;
 
+    public float startingInfluence = 10;
     public float influence = 10;
     public int influenceMultiplier = 1;
 

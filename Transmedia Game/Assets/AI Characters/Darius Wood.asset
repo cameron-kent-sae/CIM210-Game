@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Darius Wood
   characterSprite: {fileID: 21300000, guid: d3a10f4003fac6d4fadb739dcf7c46dc, type: 3}
-  influence: 12.1
-  influenceMultiplier: 2
+  startingInfluence: 13
+  influence: 13
+  influenceMultiplier: 1
   influenceUpConditionUp: 22
   influenceDownConditionUDown: -28
   influenceUpConditionDown: 58
