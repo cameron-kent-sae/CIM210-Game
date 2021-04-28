@@ -43,7 +43,8 @@ public class ScenarioManager : MonoBehaviour
     {
         uIButtons = new List<GameObject>();
 
-        LoadNextScenario();
+        //LoadNextScenario();
+        Invoke("LoadNextScenario", 0.1f);
         SetStartingStats();
     }
 
