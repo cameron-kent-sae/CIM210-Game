@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScenarioManager : MonoBehaviour
 {
@@ -34,16 +35,15 @@ public class ScenarioManager : MonoBehaviour
 
     [Header("Buttons")]
     public GameObject[] buttons;
+    private ScenarioButton playerButtonChoice;
+    private List<GameObject> uIButtons;
 
     [Header("Text")]
     public TMP_Text scenarioTitleText;
     public TMP_Text scenarioDiscriptionText;
-    public TMP_Text endingTitleText;
-    public TMP_Text endingDiscriptionText;
 
-    private ScenarioButton playerButtonChoice;
-
-    private List<GameObject> uIButtons;
+    private string winScene = "Win";
+    private string loseScene = "Lose";
 
     void Start()
     {
@@ -171,24 +171,11 @@ public class ScenarioManager : MonoBehaviour
     {
         if (condition >= winConditionLevel)
         {
-            string winTitle = "Condition Win";
-            string winText = "The world condition has drastically improved and now everyone lives in an equal and peiceful world.";
-
-            EndGame(winTitle, winText);
+            EndGame(true);
         }
         else if (condition <= loseConditionLevel)
         {
-            string loseTitle = "Condition Lose";
-            string loseText = "The world condition has drastically decreced and now the world has gone to shit. Good job asshole.   -sorry I'll change this text later";
-
-            EndGame(loseTitle, loseText);
-        }
-        else if (playerStats.influence <= -100)
-        {
-            string loseTitle = "Influence Lose";
-            string loseText = "Your influence has dropped so much that no one likes you anymore and you have been kicked out. You can no longer vote on policies and have lost the power to change the world.";
-
-            EndGame(loseTitle, loseText);
+            EndGame(false);
         }
         else
         {
@@ -294,26 +281,19 @@ public class ScenarioManager : MonoBehaviour
         {
             Debug.Log("No scenarios in the list");
 
-            string endingTitle = "Time Lose";
-            string endingText = "The world remains stagnate with it's condition neither drastically improving nor deteriorating";
-
-            EndGame(endingTitle, endingText);
+            EndGame(false);
         }
     }
 
-    public void EndGame(string endingTitle, string endingText)
+    public void EndGame(bool win)
     {
-        if(endingTitleText || endingDiscriptionText)
+        if (win)
         {
-            endingTitleText.gameObject.SetActive(true);
-            endingDiscriptionText.gameObject.SetActive(true);
-
-            endingTitleText.text = endingTitle;
-            endingDiscriptionText.text = endingText;
+            SceneManager.LoadScene(winScene);
         }
         else
         {
-            Debug.LogError("Missing ending discription text or ending title text.");
+            SceneManager.LoadScene(loseScene);
         }
     }
 }
