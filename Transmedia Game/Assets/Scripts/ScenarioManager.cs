@@ -49,7 +49,6 @@ public class ScenarioManager : MonoBehaviour
     {
         uIButtons = new List<GameObject>();
 
-        //LoadNextScenario();
         Invoke("LoadNextScenario", 0.1f);
         SetStartingStats();
     }
@@ -75,8 +74,6 @@ public class ScenarioManager : MonoBehaviour
         playerButtonChoice = button;
 
         AIChoice(button, playerStats.influenceMultiplier);
-
-        //aiManager.GenerateChoices(scenarios[0]);
 
         GenerateScenarioOutcome();
         Debug.Log("Scenario Manager: Player Button Choice: " + playerButtonChoice);
@@ -143,7 +140,7 @@ public class ScenarioManager : MonoBehaviour
         countingVotesUIPanel.SetActive(true);
         countingVotesUI.SetActive(true);
 
-        float timer = 1 + Random.Range(-1f, 3f);
+        float timer = Random.Range(2f, 5f);
 
         Invoke("VotePassed", timer);
     }
@@ -199,7 +196,6 @@ public class ScenarioManager : MonoBehaviour
 
             float minInfluence = aiInPlay[0].influence;
             float maxInfluence = aiInPlay[aiInPlay.Count - 1].influence;
-            //float n = minInfluence
             float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence));
 
             Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
@@ -240,14 +236,9 @@ public class ScenarioManager : MonoBehaviour
             {
                 for (int i = 0; i < scenarios[0].scenarioButtons.Length; i++)
                 {
-                    //GameObject button = Instantiate(buttonsPrefab, buttonTransforms[i], buttonTransforms[i]);
-                    //button.transform.position = buttonTransforms[i].position;
-
                     //Debug.Log("Scenario Manager: Scenario Buttons current button:" + scenarios[0].scenarioButtons[i] + " / " + scenarios[0].scenarioButtons.Length);
 
                     buttons[i].SetActive(true);
-
-                    //buttons[i].GetComponentInChildren<TMP_Text>().text = scenarios[0].scenarioButtons[i].buttonText;
 
                     uIButtons.Add(buttons[i]);
 
