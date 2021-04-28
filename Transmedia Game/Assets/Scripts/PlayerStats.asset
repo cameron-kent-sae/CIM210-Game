@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  characterName: James
-  characterSprite: {fileID: 0}
+  characterName: James Grant
+  characterSprite: {fileID: 21300000, guid: 459fc0fdffaf0da4fb100025dd9949f6, type: 3}
   influence: 1
   influenceMultiplier: 1
   influenceUpConditionUp: 1

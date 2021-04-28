@@ -7231,6 +7231,76 @@ PrefabInstance:
       propertyPath: scenarioManager
       value: 
       objectReference: {fileID: 110327815}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[0]
+      value: 
+      objectReference: {fileID: 1852644167}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 1884069385}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 1893382353}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[3]
+      value: 
+      objectReference: {fileID: 5706821835121595008}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[4]
+      value: 
+      objectReference: {fileID: 1242170747}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiImages.Array.data[5]
+      value: 
+      objectReference: {fileID: 1007459633}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1700756911}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[1]
+      value: 
+      objectReference: {fileID: 191686137}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[2]
+      value: 
+      objectReference: {fileID: 1690442804}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[3]
+      value: 
+      objectReference: {fileID: 5706821836754788997}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[4]
+      value: 
+      objectReference: {fileID: 919624436}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: AiTitles.Array.data[5]
+      value: 
+      objectReference: {fileID: 1096745951}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31a2f16aee968544b93620625c3fd5f9, type: 3}
 --- !u!114 &1612987599 stripped
