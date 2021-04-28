@@ -107,6 +107,7 @@ public class ScenarioManager : MonoBehaviour
 
         aiManager.UpdateAiStats(button);
 
+        scenarios.Add(scenarios[0]);
         scenarios.RemoveAt(0);
 
         foreach (GameObject uiButton in uIButtons)
@@ -161,22 +162,21 @@ public class ScenarioManager : MonoBehaviour
             
             foreach(CharacterStats character in aiList)
             {
-                if(character != playerStats)
-                {
-                    aiInPlay.Add(character);
-                }
+                aiInPlay.Add(character);
+                Debug.Log("Add Character: " + character + ", influence: " + character.influence);
             }
 
             float minInfluence = aiInPlay[0].influence;
             float maxInfluence = aiInPlay[aiInPlay.Count - 1].influence;
+            //float n = minInfluence
             float relativeInfluence = ((playerStats.influence - minInfluence) / (maxInfluence - minInfluence));
 
-            //Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
-            //Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
-            //Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
+            Debug.Log("ScenarioManager: minInfluence = " + minInfluence);
+            Debug.Log("ScenarioManager: maxInfluence = " + maxInfluence);
+            Debug.Log("ScenarioManager: Relative Influence = " + relativeInfluence);
 
             //influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
-            influenceSlider.fillAmount = relativeInfluence + 1;
+            influenceSlider.fillAmount = relativeInfluence;
         }
         else
         {
