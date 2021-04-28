@@ -27,8 +27,8 @@ public class ScenarioManager : MonoBehaviour
     public Image conditionSlider;
 
     [Header("Buttons")]
-    public GameObject buttonsPrefab;
-    public Transform[] buttonTransforms;
+    //public GameObject buttonsPrefab;
+    public GameObject[] buttons;
 
     [Header("Text")]
     public TMP_Text scenarioTitleText;
@@ -113,7 +113,7 @@ public class ScenarioManager : MonoBehaviour
         {
             uiButton.GetComponent<CustomButton>().scenarioButton.voteCount = 0;
 
-            Destroy(uiButton);
+            uiButton.SetActive(false);
         }
 
         uIButtons.Clear();
@@ -184,52 +184,48 @@ public class ScenarioManager : MonoBehaviour
             scenarioTitleText.text = scenarios[0].scenarioTitle;
             scenarioDiscriptionText.text = scenarios[0].scenarioText;
 
-            if (buttonTransforms.Length > 0)
+            if (buttons.Length == 4)
             {
-                if (buttonsPrefab)
+                for (int i = 0; i < scenarios[0].scenarioButtons.Length; i++)
                 {
-                    for(int i = 0; i < scenarios[0].scenarioButtons.Length; i++)
+                    //GameObject button = Instantiate(buttonsPrefab, buttonTransforms[i], buttonTransforms[i]);
+                    //button.transform.position = buttonTransforms[i].position;
+
+                    //Debug.Log("Scenario Manager: Scenario Buttons current button:" + scenarios[0].scenarioButtons[i] + " / " + scenarios[0].scenarioButtons.Length);
+
+                    buttons[i].SetActive(true);
+
+                    //buttons[i].GetComponentInChildren<TMP_Text>().text = scenarios[0].scenarioButtons[i].buttonText;
+
+                    uIButtons.Add(buttons[i]);
+
+                    buttons[i].name = "Button " + i;
+
+                    if (buttons[i].GetComponent<CustomButton>())
                     {
-                        GameObject button = Instantiate(buttonsPrefab, buttonTransforms[i], buttonTransforms[i]);
-                        button.transform.position = buttonTransforms[i].position;
-
-                        Debug.Log("Scenario Manager: Scenario Buttons current button:" + scenarios[0].scenarioButtons[i] + " / " + scenarios[0].scenarioButtons.Length);
-
-                        button.GetComponentInChildren<Text>().text = scenarios[0].scenarioButtons[i].buttonText;
-
-                        uIButtons.Add(button);
-
-                        button.name = "Button " + i;
-
-                        if (button.GetComponent<CustomButton>())
-                        {
-                            button.name = "Button " + i;
-
-                            button.GetComponent<CustomButton>().scenarioButton = scenarios[0].scenarioButtons[i];
-                            button.GetComponent<CustomButton>().scenarioButton.voteCount = 0;
-                            button.GetComponent<CustomButton>().scenarioManager = gameObject.GetComponent<ScenarioManager>();
-                        }
-                        else
-                        {
-                            Debug.LogError("Button Prefab missing CustomButton Component");
-                        }
-
-                        Debug.Log("Scenario Manager: Spawning Buttons: int i: " + i + " / " + scenarios[0].scenarioButtons.Length + ", Button: " + button);
+                        buttons[i].GetComponent<CustomButton>().scenarioButton = scenarios[0].scenarioButtons[i];
+                        buttons[i].GetComponent<CustomButton>().scenarioButton.voteCount = 0;
+                        buttons[i].GetComponent<CustomButton>().scenarioManager = gameObject.GetComponent<ScenarioManager>();
+                    }
+                    else
+                    {
+                        Debug.LogError("Button missing CustomButton Component");
                     }
                 }
-                else
+
+                for(int i = scenarios[0].scenarioButtons.Length; i < buttons.Length; i++)
                 {
-                    Debug.LogError("Missing Button Prefab");
+                    buttons[i].SetActive(false);
                 }
             }
             else
             {
-                Debug.LogError("No Button Transforms");
+                Debug.LogError("Missing buttons, current number of buttons = " + buttons.Length);
             }
         }
         else
         {
-            Debug.LogError("No scenarios in the list");
+            Debug.Log("No scenarios in the list");
 
             string endingTitle = "Time Lose";
             string endingText = "The world remains stagnate with it's condition neither drastically improving nor deteriorating";

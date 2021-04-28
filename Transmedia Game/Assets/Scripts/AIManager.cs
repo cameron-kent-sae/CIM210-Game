@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class AIManager : MonoBehaviour
 {
@@ -17,6 +19,10 @@ public class AIManager : MonoBehaviour
     private List<float> influenceNumber;
 
     private List<ScenarioButton> aiButtons;
+
+    [Header("UI Elements")]
+    public TMP_Text[] AiTitles;
+    public Image[] AiImages;
 
     private void Start()
     {
@@ -106,6 +112,17 @@ public class AIManager : MonoBehaviour
             {
                 charactersInPlay[i].influenceMultiplier = 1;
             }
+        }
+
+        UpdateAIUI();
+    }
+
+    void UpdateAIUI()
+    {
+        for(int i = 0; i < numberOfAICharacters; i++)
+        {
+            AiTitles[i].text = charactersInPlay[i].characterName;
+            AiImages[i].sprite = charactersInPlay[i].characterSprite;
         }
     }
 

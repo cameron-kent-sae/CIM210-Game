@@ -494,6 +494,31 @@ PrefabInstance:
       objectReference: {fileID: 624517404}
     - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
         type: 3}
+      propertyPath: buttons.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 498271404}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1916092729}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1468784568}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
+      propertyPath: buttons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1160232396}
+    - target: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+        type: 3}
       propertyPath: scenarioDiscriptionText
       value: 
       objectReference: {fileID: 305276227}
@@ -504,6 +529,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1f23b44e9511244974e027f2d3ef4e, type: 3}
+--- !u!114 &110327815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 565526757635826920, guid: de1f23b44e9511244974e027f2d3ef4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 110327814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3eefe30a9dbd4498275137f4f4d3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &129666690
 GameObject:
   m_ObjectHideFlags: 0
@@ -7189,6 +7226,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4039693502720716499, guid: 31a2f16aee968544b93620625c3fd5f9,
+        type: 3}
+      propertyPath: scenarioManager
+      value: 
+      objectReference: {fileID: 110327815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31a2f16aee968544b93620625c3fd5f9, type: 3}
 --- !u!114 &1612987599 stripped
