@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScenarioManager : MonoBehaviour
 {
@@ -22,18 +23,18 @@ public class ScenarioManager : MonoBehaviour
     private float condition = 50;
 
     [Header("UI")]
-    public Slider influenceSlider;
-    public Slider conditionSlider;
+    public Image influenceSlider;
+    public Image conditionSlider;
 
     [Header("Buttons")]
     public GameObject buttonsPrefab;
     public Transform[] buttonTransforms;
 
     [Header("Text")]
-    public Text scenarioTitleText;
-    public Text scenarioDiscriptionText;
-    public Text endingTitleText;
-    public Text endingDiscriptionText;
+    public TMP_Text scenarioTitleText;
+    public TMP_Text scenarioDiscriptionText;
+    public TMP_Text endingTitleText;
+    public TMP_Text endingDiscriptionText;
 
     private ScenarioButton playerButtonChoice;
 
@@ -154,7 +155,7 @@ public class ScenarioManager : MonoBehaviour
     {
         if (influenceSlider)
         {
-            influenceSlider.value = (playerStats.influence + 100) / 200;
+            influenceSlider.fillAmount = (playerStats.influence + 100) / 200;
         }
         else
         {
@@ -163,7 +164,7 @@ public class ScenarioManager : MonoBehaviour
 
         if (conditionSlider)
         {
-            conditionSlider.value = condition / 100;
+            conditionSlider.fillAmount = condition / 100;
         }
         else
         {

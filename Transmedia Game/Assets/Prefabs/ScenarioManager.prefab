@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &565526757635826921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565526757635826839}
+  - component: {fileID: 565526757635826920}
+  m_Layer: 0
+  m_Name: ScenarioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565526757635826839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565526757635826921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &565526757635826920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565526757635826921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d3eefe30a9dbd4498275137f4f4d3a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenarios:
+  - {fileID: 11400000, guid: 8a918ce214062484b8117bbb1fe93933, type: 2}
+  - {fileID: 11400000, guid: 88786c3a6408b434db1a13dee4f73b22, type: 2}
+  - {fileID: 11400000, guid: c549611ebbef6014ea393cfa1a903a2c, type: 2}
+  aiManager: {fileID: 0}
+  winConditionLevel: 100
+  loseConditionLevel: 0
+  playerStats: {fileID: 11400000, guid: 0b2e316d53f06054bbfca36b45f42e76, type: 2}
+  startingInfluence: 1
+  maxInfluence: 100
+  startingCondition: 50
+  influenceSlider: {fileID: 0}
+  conditionSlider: {fileID: 0}
+  buttonsPrefab: {fileID: 2855085986641953333, guid: 95385c92aab9c1844b85338973bb4839,
+    type: 3}
+  buttonTransforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scenarioTitleText: {fileID: 0}
+  scenarioDiscriptionText: {fileID: 0}
+  endingTitleText: {fileID: 0}
+  endingDiscriptionText: {fileID: 0}
