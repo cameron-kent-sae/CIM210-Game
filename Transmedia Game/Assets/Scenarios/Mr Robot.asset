@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
+  m_Name: Mr Robot
+  m_EditorClassIdentifier: 
+  scenarioTitle: Mr Robot
+  scenarioText: 'The creation of a new AI Machine has given the opportunity to replace
+    the need for people in select roles. It could be used to alleviate pressure on
+    Serf or Noble industries reducing their work hours or as extra robotic servants
+    for the Royal class.
+
+    A: New Robotic Servants
+
+    B: Support Noble Class
+
+    C:
+    Support Serf Class'
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

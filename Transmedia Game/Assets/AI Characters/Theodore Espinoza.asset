@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
-  m_Name: AI 9
+  m_Name: Theodore Espinoza
   m_EditorClassIdentifier: 
-  characterName: Alan
-  characterSprite: {fileID: 0}
+  characterName: Theodore Espinoza
+  characterSprite: {fileID: 21300000, guid: 02a220e4aff2d9e4a80e458fbcaaebbf, type: 3}
   influence: 5
   influenceMultiplier: 1
   influenceUpConditionUp: -75

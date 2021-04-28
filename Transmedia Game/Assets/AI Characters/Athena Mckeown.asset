@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915619ce5a4f319438d0a99de8a3454c, type: 3}
-  m_Name: AI 2
+  m_Name: Athena Mckeown
   m_EditorClassIdentifier: 
-  characterName: Yasmin
-  characterSprite: {fileID: 0}
+  characterName: Athena Mckeown
+  characterSprite: {fileID: 21300000, guid: 52b76f97d8e274e448fcc4aff9367b0f, type: 3}
   influence: 2.1000004
   influenceMultiplier: 2
   influenceUpConditionUp: -47
