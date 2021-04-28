@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Athena Mckeown
   characterSprite: {fileID: 21300000, guid: 52b76f97d8e274e448fcc4aff9367b0f, type: 3}
-  influence: 2.1000004
-  influenceMultiplier: 2
-  influenceUpConditionUp: -47
-  influenceDownConditionUDown: 42
-  influenceUpConditionDown: 44
-  influenceDownConditionUp: -42
+  startingInfluence: 10
+  influence: 5
+  influenceMultiplier: 1
+  influenceUpConditionUp: 63.1
+  influenceDownConditionUDown: -68.8
+  influenceUpConditionDown: 62.5
+  influenceDownConditionUp: -13.2

@@ -15,9 +15,9 @@ MonoBehaviour:
   characterName: Sabrina Morales
   characterSprite: {fileID: 21300000, guid: 487cdce6026e7744b8eb2dd50fa23646, type: 3}
   startingInfluence: 30
-  influence: -15
+  influence: 30
   influenceMultiplier: 2
   influenceUpConditionUp: 50
   influenceDownConditionUDown: -50
-  influenceUpConditionDown: -15
-  influenceDownConditionUp: 15
+  influenceUpConditionDown: 39.7
+  influenceDownConditionUp: -3.5

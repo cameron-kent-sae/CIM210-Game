@@ -140,7 +140,8 @@ public class AIManager : MonoBehaviour
     {
         Debug.Log("AI Manager: Generate Choices");
 
-        aiButtons.Clear();
+        if(aiButtons.Count > 0)
+            aiButtons.Clear();
 
         foreach(CharacterStats ai in aiCharactersInPlay)
         {
@@ -196,7 +197,7 @@ public class AIManager : MonoBehaviour
             }
         }
 
-        scenarioManager.GenerateScenarioOutcome();
+        //scenarioManager.GenerateScenarioOutcome();
     }
 
     public List<CharacterStats> GetAisInPlay()

@@ -16,8 +16,8 @@ MonoBehaviour:
   characterSprite: {fileID: 21300000, guid: f736efa330fa697428051d937eef0c8a, type: 3}
   startingInfluence: 25
   influence: 25
-  influenceMultiplier: 2
-  influenceUpConditionUp: 39.7
-  influenceDownConditionUDown: -40.8
-  influenceUpConditionDown: 27.6
-  influenceDownConditionUp: -18.2
+  influenceMultiplier: 1
+  influenceUpConditionUp: 22.8
+  influenceDownConditionUDown: -28.2
+  influenceUpConditionDown: 4
+  influenceDownConditionUp: 13.6
