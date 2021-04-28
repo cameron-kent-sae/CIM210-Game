@@ -136,13 +136,13 @@ public class AIManager : MonoBehaviour
 
     void UpdateAIUI()
     {
-        for(int i = 0; i < numberOfAICharacters; i++)
-        {
-            AiTitles[i].text = charactersInPlay[i + 1].characterName;
-            AiImages[i].sprite = charactersInPlay[i + 1].characterSprite;
-        }
-
         charactersInPlay.Remove(playerStats);
+
+        for (int i = 0; i < numberOfAICharacters; i++)
+        {
+            AiTitles[i].text = charactersInPlay[i].characterName;
+            AiImages[i].sprite = charactersInPlay[i].characterSprite;
+        }
     }
 
     int SortByInfluence(CharacterStats ai1, CharacterStats ai2)
