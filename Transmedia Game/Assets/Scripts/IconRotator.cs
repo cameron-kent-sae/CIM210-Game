@@ -6,7 +6,7 @@ public class IconRotator : MonoBehaviour
 {
     private void Start()
     {
-        StartCoroutine(RotateObject(90, Vector3.back, 1));
+        StartCoroutine(RotateObject(90, Vector3.back, 0.5f));
     }
 
     IEnumerator RotateObject(float angle, Vector3 axis, float inTime)
