@@ -17,8 +17,9 @@ public class ChatBubblePulse : MonoBehaviour
     void Awake()
     {
         icon = gameObject.GetComponent<Image>();
+        StartCoroutine(Pulse());
 
-        StartPulser();
+        //StartPulser();
     }
 
     public void StartPulser()
