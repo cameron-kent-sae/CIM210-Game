@@ -11486,7 +11486,7 @@ MonoBehaviour:
   menuBtn: {fileID: 1545832443}
   continueBtn: {fileID: 1141390961}
   exitBtn: {fileID: 1135261383}
-  sceneToLoad: Splash Main
+  sceneToLoad: Main
   pauseUI: {fileID: 1663606537}
 --- !u!82 &2039552593
 AudioSource:
