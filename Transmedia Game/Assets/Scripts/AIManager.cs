@@ -243,14 +243,14 @@ public class AIManager : MonoBehaviour
         {
             int rand = Random.Range(0, dialogsToLoad.Count);
 
-            dialogeIcons[rand].SetActive(true);
+            dialogeIcons[rand].GetComponent<Image>().enabled = true;
 
             dialogsToLoad.RemoveAt(rand);
         }
 
         foreach(GameObject icon in dialogsToLoad)
         {
-            icon.SetActive(false);
+            icon.GetComponent<Image>().enabled = false;
         }
     }
 
