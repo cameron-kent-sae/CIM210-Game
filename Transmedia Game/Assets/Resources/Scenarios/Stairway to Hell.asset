@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
-  m_Name: Stairway to Heaven
+  m_Name: Stairway to Hell
   m_EditorClassIdentifier: 
-  scenarioTitle: Stairway to Heaven
+  scenarioTitle: Stairway to Hell
   scenarioText: 'The Ascenders are a newly formed cult among Serfs. They are preaching
     that this life is a gateway to a True Perfect Life. All fine except they are
     promoting and enabling Neural Chip suicide to get there. This is leading to overflowing
     morgues and worker shortages.
+
 
     A: Let them continue believing
 
