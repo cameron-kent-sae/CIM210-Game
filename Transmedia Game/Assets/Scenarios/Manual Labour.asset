@@ -25,6 +25,6 @@ MonoBehaviour:
 
     C: Ignore them for now'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: cf57174a7bbc42642a3b350818852be4, type: 2}
+  - {fileID: 11400000, guid: 16804e13c7605844bb734b4933649419, type: 2}
+  - {fileID: 11400000, guid: a5fd635c8f806414084c0cb610a7946a, type: 2}

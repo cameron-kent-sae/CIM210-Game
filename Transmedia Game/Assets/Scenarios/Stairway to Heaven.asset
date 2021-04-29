@@ -25,6 +25,6 @@ MonoBehaviour:
 
     C: Execute the leaders'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8160f9f7da869964f81310e4cebf204c, type: 2}
+  - {fileID: 11400000, guid: 519668cb832d76f43aa5ff2d663a2034, type: 2}
+  - {fileID: 11400000, guid: 15bec9806f28e8c4f91b01e79739b87b, type: 2}

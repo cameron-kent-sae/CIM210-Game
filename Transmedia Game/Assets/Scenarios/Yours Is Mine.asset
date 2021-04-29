@@ -27,7 +27,7 @@ MonoBehaviour:
 
     D: Publicly deny the request'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 87456781bc79ac742af89ce04f7ca05a, type: 2}
+  - {fileID: 11400000, guid: e23dc26f77dce5c47b57d914e14f95e6, type: 2}
+  - {fileID: 11400000, guid: 40e7ec1a615eb664395173d1efcf36d1, type: 2}
+  - {fileID: 11400000, guid: 591e6a5e12b7d1d46af06bab7e51bb36, type: 2}

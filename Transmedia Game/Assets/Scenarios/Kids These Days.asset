@@ -23,5 +23,5 @@ MonoBehaviour:
 
     B: Reprimand the culprit'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 15168cdf4dcacbd43989647831ab6f21, type: 2}
+  - {fileID: 11400000, guid: e81d8f2cb462a224ca9be48954785bf6, type: 2}

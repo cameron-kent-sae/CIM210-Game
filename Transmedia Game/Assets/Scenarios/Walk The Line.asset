@@ -25,6 +25,6 @@ MonoBehaviour:
     C:
     Confiscate for Royal use'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8f0169f41f2026e419e8f6c14d00ce25, type: 2}
+  - {fileID: 11400000, guid: e7b8924b15654014183d4ae010258704, type: 2}
+  - {fileID: 11400000, guid: 495c76f673752c94891364798df7d332, type: 2}

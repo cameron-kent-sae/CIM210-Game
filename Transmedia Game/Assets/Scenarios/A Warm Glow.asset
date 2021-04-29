@@ -27,7 +27,7 @@ MonoBehaviour:
 
     D: Increase security patrols'
   scenarioButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3fee50c41b2b83846af290087f95bf06, type: 2}
+  - {fileID: 11400000, guid: 58ebfcbb302b48a45a698d7f304327ff, type: 2}
+  - {fileID: 11400000, guid: ee82040d99828294aa6fed5de64cc87a, type: 2}
+  - {fileID: 11400000, guid: c0481ba8d61149c46850afc608197550, type: 2}
