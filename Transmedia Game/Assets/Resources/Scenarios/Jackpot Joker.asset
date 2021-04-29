@@ -17,7 +17,7 @@ MonoBehaviour:
     and is trying to buy their way into the Royal class. Their winnings trifle in
     comparison to Royal wealth but they\u2019ve made their desire to ascend quite
     public. It could be an opportunity to win favour or enforce the standing class
-    order.\nA: Ascend them for show\nB: Crush their request"
+    order.\n\nA: Ascend them for show\nB: Crush their request"
   scenarioButtons:
   - {fileID: 11400000, guid: f40fb197c98072e49884c6dc582e7132, type: 2}
   - {fileID: 11400000, guid: 29eba8a29b8a1d142965b677669afdd6, type: 2}
