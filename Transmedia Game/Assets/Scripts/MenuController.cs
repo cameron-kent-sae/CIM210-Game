@@ -9,8 +9,6 @@ public class MenuController : MonoBehaviour
 {
     public Button playBtn, creditsBtn, exitBtn;
     public string gameScene, creditsScene;
-    public CanvasGroup canvasGroup;
-    public float fadeLength;
     private AudioSource audioSource;
 
     public void Start()
@@ -21,23 +19,6 @@ public class MenuController : MonoBehaviour
         creditsBtn.onClick.AddListener(ShowCredits);
         exitBtn.onClick.AddListener(ExitGame);
 
-        StartFade();
-    }
-
-    public void StartFade()
-    {
-        StartCoroutine("FadeInCanvas");
-    }
-
-    IEnumerator FadeInCanvas()
-    {
-        yield return new WaitForSeconds(1);
-
-        for (float t = 0f; t < fadeLength; t += Time.deltaTime)
-        {
-            canvasGroup.alpha = t;
-            yield return null;
-        }
     }
 
     private void PlayGame()

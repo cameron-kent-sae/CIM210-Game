@@ -429,7 +429,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504812596}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -834,7 +834,6 @@ GameObject:
   - component: {fileID: 1565723650}
   - component: {fileID: 1565723649}
   - component: {fileID: 1565723653}
-  - component: {fileID: 1565723655}
   - component: {fileID: 1565723654}
   m_Layer: 5
   m_Name: Canvas
@@ -941,6 +940,8 @@ MonoBehaviour:
   exitBtn: {fileID: 1760681958}
   gameScene: Intro
   creditsScene: Credits
+  canvasGroup: {fileID: 504812601}
+  fadeLength: 10
 --- !u!82 &1565723654
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1037,20 +1038,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1565723655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565723648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daaea80c0d10e8f4a9d1c43e9d6b9b20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 504812601}
-  fadeLength: 3
 --- !u!1 &1669221479
 GameObject:
   m_ObjectHideFlags: 0
