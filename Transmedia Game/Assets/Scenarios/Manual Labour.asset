@@ -12,6 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
   m_Name: Manual Labour
   m_EditorClassIdentifier: 
-  scenarioTitle: New Scenario
-  scenarioText: Scenario Text
-  scenarioButtons: []
+  scenarioTitle: Manual Labour
+  scenarioText: 'Someone in the Royal class is having Serfs kidnapped and removing
+    their Neural Chips in order to perform elicit dealings on their behalf. The crimes
+    are only being committed against Nobles and Serfs but they may turn their attention
+    to Royals if they get bold.
+
+    A: Safeguard the Neural Chips
+
+    B: Incarcerate
+    the Royal
+
+    C: Ignore them for now'
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

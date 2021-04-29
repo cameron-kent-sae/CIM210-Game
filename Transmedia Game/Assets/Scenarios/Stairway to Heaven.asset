@@ -12,6 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
   m_Name: Stairway to Heaven
   m_EditorClassIdentifier: 
-  scenarioTitle: New Scenario
-  scenarioText: Scenario Text
-  scenarioButtons: []
+  scenarioTitle: Stairway to Heaven
+  scenarioText: 'The Ascenders are a newly formed cult among Serfs. They are preaching
+    that this life is a gateway to a True Perfect Life. All fine except they are
+    promoting and enabling Neural Chip suicide to get there. This is leading to overflowing
+    morgues and worker shortages.
+
+    A: Let them continue believing
+
+    B: Rehabilitate
+    the members
+
+    C: Execute the leaders'
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

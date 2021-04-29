@@ -12,6 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3159995267a0cb04c87c65f040040447, type: 3}
   m_Name: Yours Is Mine
   m_EditorClassIdentifier: 
-  scenarioTitle: New Scenario
-  scenarioText: Scenario Text
-  scenarioButtons: []
+  scenarioTitle: Yours Is Mine
+  scenarioText: 'Elderly Royals have been petitioning for involuntary conscription
+    of organ donors from Nobles to help their health and life expectancy. Some organs
+    required would result in the death of the donor, others severely limiting the
+    capability of the donor to contribute to their class.
+
+    A: Take what we want
+
+    B:
+    Use synthetic organs
+
+    C: Ignore the petitions
+
+    D: Publicly deny the request'
+  scenarioButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
