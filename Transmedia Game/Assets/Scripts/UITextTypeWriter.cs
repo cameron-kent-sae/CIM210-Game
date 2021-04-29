@@ -9,7 +9,12 @@ public class UITextTypeWriter: MonoBehaviour
 	TMP_Text txt;
 	string story;
 
-	void Awake()
+    private void Start()
+    {
+		Time.timeScale = 1;
+	}
+
+    void Awake()
 	{
 		txt = GetComponent<TMP_Text>();
 		story = txt.text;

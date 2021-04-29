@@ -6,6 +6,10 @@ public class MenuFader : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
     public float fadeLength = 3;
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
 
     private void Awake()
     {

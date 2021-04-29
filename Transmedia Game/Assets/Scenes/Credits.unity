@@ -1845,7 +1845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startBtn: {fileID: 1928798962}
-  sceneToLoad: Main Menu
+  sceneToLoad: Splash Main
 --- !u!82 &1038620053
 AudioSource:
   m_ObjectHideFlags: 0
