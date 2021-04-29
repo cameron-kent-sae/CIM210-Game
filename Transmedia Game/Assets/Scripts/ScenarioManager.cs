@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class ScenarioManager : MonoBehaviour
 {
     [Header("Scenario")]
+    public Scenario[] possibleScenarios;
     public List<Scenario> scenarios;
 
     public AIManager aiManager;
@@ -52,8 +53,29 @@ public class ScenarioManager : MonoBehaviour
     {
         uIButtons = new List<GameObject>();
 
-        Invoke("LoadNextScenario", 0.1f);
+        LoadRandomScenarioes();
         SetStartingStats();
+    }
+
+    void LoadRandomScenarioes()
+    {
+        Scenario[] sce = Resources.LoadAll<Scenario>("Scenarios/");
+        scenarios.Clear();
+
+        foreach(Scenario i in sce)
+        {
+            scenarios.Add(i);
+        }
+
+        for(int i = 0; i < scenarios.Count; i++)
+        {
+            Scenario temp = scenarios[i];
+            int rand = Random.Range(i, scenarios.Count);
+            scenarios[i] = scenarios[rand];
+            scenarios[rand] = temp;
+        }
+
+        Invoke("LoadNextScenario", 0.1f);
     }
 
     void SetStartingStats()
@@ -123,7 +145,7 @@ public class ScenarioManager : MonoBehaviour
 
         aiManager.UpdateAiStats(button);
 
-        scenarios.Add(scenarios[0]);
+        //scenarios.Add(scenarios[0]);
         scenarios.RemoveAt(0);
 
         foreach (GameObject uiButton in uIButtons)
@@ -280,7 +302,7 @@ public class ScenarioManager : MonoBehaviour
         {
             Debug.Log("No scenarios in the list");
 
-            EndGame(false);
+            LoadRandomScenarioes();
         }
     }
 
